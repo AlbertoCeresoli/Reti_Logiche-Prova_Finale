@@ -14,7 +14,7 @@ entity project_reti_logiche is
         o_z1 : out std_logic_vector(7 downto 0);
         o_z2 : out std_logic_vector(7 downto 0);
         o_z3 : out std_logic_vector(7 downto 0);
-        o_done : out std_logic;
+        o_done : out std_logic := '0';
         o_mem_addr : out std_logic_vector(15 downto 0);
         i_mem_data : in std_logic_vector(7 downto 0);
         o_mem_we : out std_logic;
@@ -63,7 +63,7 @@ component datapath is
         rw_load : in std_logic;
         rz_load : in std_logic;
         z_sel : out std_logic_vector(1 downto 0);
-        o_done : out std_logic;
+        o_done : out std_logic := '0';
         i_done : in std_logic;
         i_mem_data : in std_logic_vector(7 downto 0);
         o_mem_addr : out std_logic_vector(15 downto 0);
@@ -114,9 +114,9 @@ begin
     begin
         if(i_rst = '1') then
             cur_state <= INITIATE;
-    elsif i_clk'event and i_clk = '1' then
+        elsif i_clk'event and i_clk = '1' then
         cur_state <= next_state;
-    end if;
+        end if;
     end process;
     
  --Next State Function for the FSM (NSF)
@@ -136,7 +136,7 @@ begin
                 when RECEIVING_W =>
                     if i_start = '0' then
                         next_state <= WAIT_MEM;
-                    end if;    
+                    end if;
                     --!! elsif misses for the default branch
                 when WAIT_MEM =>
                     case z_sel is
@@ -148,6 +148,8 @@ begin
                             next_state <= ACTIVATE_Z2;
                         when "11" =>
                             next_state <= ACTIVATE_Z3;
+                        when others =>
+                            next_state <= cur_state;
                      end case;
                 when ACTIVATE_Z0 =>
                     next_state <= PRINT_OUT;
@@ -175,20 +177,22 @@ begin
         r2_load <= '0';
         r3_load <= '0';
         rw_load <= '0';
-        rz_load <= '0';
-        z_sel <= "XX";
+        rz_load <= '1';
+        --z_sel <= "XX";
         o_done <= '0';
         i_done <= '0';
-        o_mem_addr <= "XXXXXXXXXXXXXXXX";
+       -- o_mem_addr <= "0000000000000000";
         
         case cur_state is
-            when INITIATE =>
+            when INITIATE => 
+                
             when RECEIVING_CH1 => 
                 rz_load <= '1';
             when RECEIVING_CH2 =>
-            when RECEIVING_W =>
-                rz_load <= '0';
                 rw_load <= '1';
+                rz_load <= '0'; 
+            when RECEIVING_W =>
+                               
             when WAIT_MEM =>
                 o_mem_en <= '1';
                 rw_load <= '0';
@@ -232,37 +236,36 @@ signal reg_z3 : std_logic_vector(7 downto 0);
 
 begin
     CHOSING_Z : process(i_clk, i_rst)
-            begin
+            begin                
+            z_sel <= reg_z;
                 if(i_rst = '1') then
-                    reg_z <= "XX";
-                elsif i_clk'event and i_clk = '1' then
+                    reg_z <= "X0";
+                elsif rising_edge(i_clk) then
                     if(rz_load = '1') then
-                        reg_z(1) <= i_w;
-                        if i_clk'event and i_clk = '1' then
-                            reg_z(0) <= i_w;
-                        end if;
-                    else z_sel <= reg_z;
+                        reg_z <= reg_z(0) & i_w;
+                    end if;
+                        
+                 end if;
+            end process; 
+                        
+    CREATING_ADDR : process(i_clk, i_rst)
+            begin
+            o_mem_addr <= reg_w;
+                if(i_rst = '1') then
+                    reg_w <= "0000000000000000";
+                elsif rising_edge(i_clk) then
+                    if(rw_load = '1') then
+                        reg_w <= reg_w(14 downto 0) & i_w;
                     end if;
                  end if;
             end process; 
             
-    CREATING_ADDR : process(i_clk, i_rst)
-            begin
-                if(i_rst = '1') then
-                    reg_w <= "0000000000000000";
-                elsif i_clk'event and i_clk = '1' then
-                    if(rw_load = '1') then
-                        reg_w <= reg_w(14 downto 0) & i_w;
-                    else o_mem_addr <= reg_w;
-                    end if;
-                 end if;
-            end process; 
      
     WRITE_REG0 : process(i_clk, i_rst)
             begin
                 if(i_rst = '1') then
                     reg_z0 <= "00000000";
-                elsif i_clk'event and i_clk = '1' then
+                elsif rising_edge(i_clk) then
                     if(r0_load = '1') then
                         reg_z0 <= i_mem_data;
                     end if;
@@ -273,7 +276,7 @@ begin
             begin
                 if(i_rst = '1') then
                     reg_z1 <= "00000000";
-                elsif i_clk'event and i_clk = '1' then
+                elsif rising_edge(i_clk) then
                     if(r1_load = '1') then
                         reg_z1 <= i_mem_data;
                     end if;
@@ -284,7 +287,7 @@ begin
             begin
                 if(i_rst = '1') then
                     reg_z2 <= "00000000";
-                elsif i_clk'event and i_clk = '1' then
+                elsif rising_edge(i_clk) then
                     if(r2_load = '1') then
                         reg_z2 <= i_mem_data;
                     end if;
@@ -295,7 +298,7 @@ begin
             begin
                 if(i_rst = '1') then
                     reg_z3 <= "00000000";
-                elsif i_clk'event and i_clk = '1' then
+                elsif rising_edge(i_clk) then
                     if(r3_load = '1') then
                         reg_z3 <= i_mem_data;
                     end if;
@@ -318,14 +321,4 @@ begin
         o_z3 <= reg_z3 when '1',
                 "00000000" when others;    
     
-    
-    
-    
-    
-    
-    
-    
-    
-    
-
-end Behavioral;
+    end Behavioral;
