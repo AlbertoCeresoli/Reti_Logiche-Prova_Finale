@@ -1,0 +1,152 @@
+#-----------------------------------------------------------
+# Vivado v2022.2 (64-bit)
+# SW Build 3671981 on Fri Oct 14 05:00:03 MDT 2022
+# IP Build 3669848 on Fri Oct 14 08:30:02 MDT 2022
+# Start of session at: Tue Mar  7 08:19:09 2023
+# Process ID: 8304
+# Current directory: C:/Users/DELL/Desktop/10680462_10670892/Progetto_reti
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent13212 C:\Users\DELL\Desktop\10680462_10670892\Progetto_reti\10680462_10670892.xpr
+# Log file: C:/Users/DELL/Desktop/10680462_10670892/Progetto_reti/vivado.log
+# Journal file: C:/Users/DELL/Desktop/10680462_10670892/Progetto_reti\vivado.jou
+# Running On: DESKTOP-UR6F32S, OS: Windows, CPU Frequency: 2712 MHz, CPU Physical cores: 4, Host memory: 8242 MB
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/DELL/Desktop/10680462_10670892/Progetto_reti/10680462_10670892.xpr
+update_compile_order -fileset sources_1
+launch_simulation
+open_wave_config C:/Users/DELL/Desktop/10680462_10670892/Progetto_reti/behav_with_regs.wcfg
+source project_tb.tcl
+run 10000 ns
+run 10000 ns
+close_sim
+launch_simulation
+open_wave_config C:/Users/DELL/Desktop/10680462_10670892/Progetto_reti/behav_with_regs.wcfg
+source project_tb.tcl
+run 10000 ns
+run 10000 ns
+close_sim
+launch_simulation
+open_wave_config C:/Users/DELL/Desktop/10680462_10670892/Progetto_reti/behav_with_regs.wcfg
+source project_tb.tcl
+run 10000 ns
+run 10000 ns
+close_sim
+launch_simulation
+open_wave_config C:/Users/DELL/Desktop/10680462_10670892/Progetto_reti/behav_with_regs.wcfg
+source project_tb.tcl
+run 10000 ns
+run 10000 ns
+set_property SOURCE_SET sources_1 [get_filesets sim_1]
+add_files -fileset sim_1 -norecurse {{C:/Users/DELL/Desktop/UNI/Reti Logiche/tb_7.vhd} {C:/Users/DELL/Desktop/UNI/Reti Logiche/tb_2.vhd} {C:/Users/DELL/Desktop/UNI/Reti Logiche/tb_5.vhd} {C:/Users/DELL/Desktop/UNI/Reti Logiche/tb_4.vhd} {C:/Users/DELL/Desktop/UNI/Reti Logiche/tb_3.vhd} {C:/Users/DELL/Desktop/UNI/Reti Logiche/tb_6.vhd}}
+update_compile_order -fileset sim_1
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode All [current_project]
+export_ip_user_files -of_objects  [get_files {{C:/Users/DELL/Desktop/UNI/Reti Logiche/tb_6.vhd}}] -no_script -reset -force -quiet
+remove_files  -fileset sim_1 {{C:/Users/DELL/Desktop/UNI/Reti Logiche/tb_6.vhd}}
+export_ip_user_files -of_objects  [get_files {{C:/Users/DELL/Desktop/UNI/Reti Logiche/tb_7.vhd}}] -no_script -reset -force -quiet
+remove_files  -fileset sim_1 {{C:/Users/DELL/Desktop/UNI/Reti Logiche/tb_7.vhd}}
+update_compile_order -fileset sim_1
+export_ip_user_files -of_objects  [get_files {{C:/Users/DELL/Desktop/UNI/Reti Logiche/tb_2.vhd}}] -no_script -reset -force -quiet
+remove_files  -fileset sim_1 {{C:/Users/DELL/Desktop/UNI/Reti Logiche/tb_2.vhd}}
+export_ip_user_files -of_objects  [get_files {{C:/Users/DELL/Desktop/UNI/Reti Logiche/tb_4.vhd}}] -no_script -reset -force -quiet
+remove_files  -fileset sim_1 {{C:/Users/DELL/Desktop/UNI/Reti Logiche/tb_4.vhd}}
+export_ip_user_files -of_objects  [get_files {{C:/Users/DELL/Desktop/UNI/Reti Logiche/tb_3.vhd}}] -no_script -reset -force -quiet
+remove_files  -fileset sim_1 {{C:/Users/DELL/Desktop/UNI/Reti Logiche/tb_3.vhd}}
+export_ip_user_files -of_objects  [get_files {{C:/Users/DELL/Desktop/UNI/Reti Logiche/tb_5.vhd}}] -no_script -reset -force -quiet
+remove_files  -fileset sim_1 {{C:/Users/DELL/Desktop/UNI/Reti Logiche/tb_5.vhd}}
+update_compile_order -fileset sim_1
+close_sim
+launch_simulation
+open_wave_config C:/Users/DELL/Desktop/10680462_10670892/Progetto_reti/behav_with_regs.wcfg
+source project_tb.tcl
+run 10000 ns
+run 10000 ns
+close_sim
+launch_simulation
+open_wave_config C:/Users/DELL/Desktop/10680462_10670892/Progetto_reti/behav_with_regs.wcfg
+source project_tb.tcl
+run 400000 ns
+close_sim
+launch_simulation
+open_wave_config C:/Users/DELL/Desktop/10680462_10670892/Progetto_reti/behav_with_regs.wcfg
+source project_tb.tcl
+run 100000 ns
+close_sim
+launch_simulation
+launch_simulation
+open_wave_config C:/Users/DELL/Desktop/10680462_10670892/Progetto_reti/behav_with_regs.wcfg
+source project_tb.tcl
+run 100000 ns
+close_sim
+launch_simulation
+open_wave_config C:/Users/DELL/Desktop/10680462_10670892/Progetto_reti/behav_with_regs.wcfg
+source project_tb.tcl
+run 100000 ns
+close_sim
+launch_simulation
+open_wave_config C:/Users/DELL/Desktop/10680462_10670892/Progetto_reti/behav_with_regs.wcfg
+source project_tb.tcl
+run 50000 ns
+close_sim
+launch_simulation
+open_wave_config C:/Users/DELL/Desktop/10680462_10670892/Progetto_reti/behav_with_regs.wcfg
+source project_tb.tcl
+run 50000 ns
+close_sim
+launch_simulation
+open_wave_config C:/Users/DELL/Desktop/10680462_10670892/Progetto_reti/behav_with_regs.wcfg
+source project_tb.tcl
+run 50000 ns
+close_sim
+launch_simulation
+open_wave_config C:/Users/DELL/Desktop/10680462_10670892/Progetto_reti/behav_with_regs.wcfg
+source project_tb.tcl
+run 50000 ns
+close_sim
+launch_simulation
+open_wave_config C:/Users/DELL/Desktop/10680462_10670892/Progetto_reti/behav_with_regs.wcfg
+source project_tb.tcl
+run 50000 ns
+close_sim
+launch_simulation
+open_wave_config C:/Users/DELL/Desktop/10680462_10670892/Progetto_reti/behav_with_regs.wcfg
+source project_tb.tcl
+run 50000 ns
+close_sim
+launch_simulation
+open_wave_config C:/Users/DELL/Desktop/10680462_10670892/Progetto_reti/behav_with_regs.wcfg
+source project_tb.tcl
+run 50000 ns
+close_sim
+launch_simulation
+open_wave_config C:/Users/DELL/Desktop/10680462_10670892/Progetto_reti/behav_with_regs.wcfg
+source project_tb.tcl
+run 50000 ns
+close_sim
+launch_simulation
+open_wave_config C:/Users/DELL/Desktop/10680462_10670892/Progetto_reti/behav_with_regs.wcfg
+source project_tb.tcl
+run 50000 ns
+close_sim
+launch_simulation
+open_wave_config C:/Users/DELL/Desktop/10680462_10670892/Progetto_reti/behav_with_regs.wcfg
+source project_tb.tcl
+run 50000 ns
+close_sim
+launch_simulation
+open_wave_config C:/Users/DELL/Desktop/10680462_10670892/Progetto_reti/behav_with_regs.wcfg
+source project_tb.tcl
+run 50000 ns
+close_sim
+launch_simulation
+open_wave_config C:/Users/DELL/Desktop/10680462_10670892/Progetto_reti/behav_with_regs.wcfg
+source project_tb.tcl
+run 50000 ns
+close_sim
+launch_simulation
+open_wave_config C:/Users/DELL/Desktop/10680462_10670892/Progetto_reti/behav_with_regs.wcfg
+source project_tb.tcl
+run 50000 ns
+close_sim
