@@ -14,7 +14,7 @@ entity project_reti_logiche is
         o_z1 : out std_logic_vector(7 downto 0);
         o_z2 : out std_logic_vector(7 downto 0);
         o_z3 : out std_logic_vector(7 downto 0);
-        o_done : out std_logic := '0';
+        o_done : out std_logic;
         o_mem_addr : out std_logic_vector(15 downto 0);
         i_mem_data : in std_logic_vector(7 downto 0);
         o_mem_we : out std_logic;
@@ -46,7 +46,8 @@ entity datapath is
         o_z0 : out std_logic_vector(7 downto 0);
         o_z1 : out std_logic_vector(7 downto 0);
         o_z2 : out std_logic_vector(7 downto 0);
-        o_z3 : out std_logic_vector(7 downto 0)      
+        o_z3 : out std_logic_vector(7 downto 0)  ;
+        i_start : in std_logic    
         );
 end datapath;
 
@@ -63,14 +64,15 @@ component datapath is
         rw_load : in std_logic;
         rz_load : in std_logic;
         z_sel : out std_logic_vector(1 downto 0);
-        o_done : out std_logic := '0';
+        o_done : out std_logic;
         i_done : in std_logic;
         i_mem_data : in std_logic_vector(7 downto 0);
         o_mem_addr : out std_logic_vector(15 downto 0);
         o_z0 : out std_logic_vector(7 downto 0);
         o_z1 : out std_logic_vector(7 downto 0);
         o_z2 : out std_logic_vector(7 downto 0);
-        o_z3 : out std_logic_vector(7 downto 0)      
+        o_z3 : out std_logic_vector(7 downto 0) ;
+        i_start : in std_logic     
         );
 end component;
 
@@ -106,7 +108,8 @@ begin
             o_z0,
             o_z1,
             o_z2,
-            o_z3
+            o_z3,
+            i_start
         );
  
  --Reset process for the FSM: when reset goes on INITIATE
@@ -176,10 +179,10 @@ begin
         r1_load <= '0';
         r2_load <= '0';
         r3_load <= '0';
-        rw_load <= '0';
+        --rw_load <= '0';
         rz_load <= '1';
         --z_sel <= "XX";
-        o_done <= '0';
+        --o_done <= '0';
         i_done <= '0';
        -- o_mem_addr <= "0000000000000000";
         
@@ -192,22 +195,22 @@ begin
                 rw_load <= '1';
                 rz_load <= '0'; 
             when RECEIVING_W =>
-                               
+                rz_load <= '0'; 
             when WAIT_MEM =>
                 o_mem_en <= '1';
                 rw_load <= '0';
             when ACTIVATE_Z0 => 
                 r0_load <= '1';
-                rw_load <= '1';
+                rw_load <= '0';
             when ACTIVATE_Z1 => 
                 r1_load <= '1';
-                rw_load <= '1';
+                rw_load <= '0';
             when ACTIVATE_Z2 => 
                 r2_load <= '1';
-                rw_load <= '1';
+                rw_load <= '0';
             when ACTIVATE_Z3 => 
                 r3_load <= '1';
-                rw_load <= '1';
+                rw_load <= '0';
             when PRINT_OUT =>
                 o_done <= '1';
                 i_done <= '1';
@@ -233,11 +236,12 @@ signal reg_z0 : std_logic_vector(7 downto 0);
 signal reg_z1 : std_logic_vector(7 downto 0);
 signal reg_z2 : std_logic_vector(7 downto 0);
 signal reg_z3 : std_logic_vector(7 downto 0);
-
+signal start : std_logic;
 begin
     CHOSING_Z : process(i_clk, i_rst)
             begin                
             z_sel <= reg_z;
+            
                 if(i_rst = '1') then
                     reg_z <= "X0";
                 elsif rising_edge(i_clk) then
@@ -248,12 +252,14 @@ begin
                  end if;
             end process; 
                         
-    CREATING_ADDR : process(i_clk, i_rst)
+    CREATING_ADDR : process(i_clk, i_rst, i_start)    -- 
             begin
-            o_mem_addr <= reg_w;
+          o_mem_addr <= reg_w;
                 if(i_rst = '1') then
                     reg_w <= "0000000000000000";
-                elsif rising_edge(i_clk) then
+                elsif rising_edge(i_start) then
+                    reg_w <= "0000000000000000";
+                elsif rising_edge(i_clk) and i_start = '1' then
                     if(rw_load = '1') then
                         reg_w <= reg_w(14 downto 0) & i_w;
                     end if;
@@ -304,7 +310,7 @@ begin
                     end if;
                  end if;
             end process;    
-    
+
     with i_done select
         o_z0 <= reg_z0 when '1',
                 "00000000" when others;    
