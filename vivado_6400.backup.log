@@ -1,0 +1,1094 @@
+#-----------------------------------------------------------
+# Vivado v2022.2 (64-bit)
+# SW Build 3671981 on Fri Oct 14 05:00:03 MDT 2022
+# IP Build 3669848 on Fri Oct 14 08:30:02 MDT 2022
+# Start of session at: Tue Mar  7 16:55:50 2023
+# Process ID: 6400
+# Current directory: C:/Users/DELL/Desktop/10680462_10670892/Progetto_reti
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent15820 C:\Users\DELL\Desktop\10680462_10670892\Progetto_reti\10680462_10670892.xpr
+# Log file: C:/Users/DELL/Desktop/10680462_10670892/Progetto_reti/vivado.log
+# Journal file: C:/Users/DELL/Desktop/10680462_10670892/Progetto_reti\vivado.jou
+# Running On: DESKTOP-UR6F32S, OS: Windows, CPU Frequency: 2712 MHz, CPU Physical cores: 4, Host memory: 8242 MB
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/DELL/Desktop/10680462_10670892/Progetto_reti/10680462_10670892.xpr
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kc705:part0:1.6 available at C:/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/kc705/1.6/board.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kcu105:part0:1.6 available at C:/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/kcu105/1.6/board.xml as part xcku040-ffva1156-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kcu105:part0:1.7 available at C:/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/kcu105/1.7/board.xml as part xcku040-ffva1156-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kcu1500:part0:1.2 available at C:/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/kcu1500/1.2/board.xml as part xcku115-flvb2104-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vc707:part0:1.4 available at C:/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vc707/1.4/board.xml as part xc7vx485tffg1761-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vc709:part0:1.8 available at C:/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vc709/1.8/board.xml as part xc7vx690tffg1761-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190:part0:2.2 available at C:/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vck190/production/2.2/board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190:part0:3.0 available at C:/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vck190/production/3.0/board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190:part0:3.1 available at C:/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vck190/production/3.1/board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190_newl:part0:1.0 available at C:/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vck190_newl/production/1.0/board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu108:part0:1.6 available at C:/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu108/1.6/board.xml as part xcvu095-ffva2104-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu108:part0:1.7 available at C:/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu108/1.7/board.xml as part xcvu095-ffva2104-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu110:part0:1.4 available at C:/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu110/1.4/board.xml as part xcvu190-flgc2104-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu118:part0:2.0 available at C:/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu118/2.0/board.xml as part xcvu9p-flga2104-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu118:part0:2.3 available at C:/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu118/2.3/board.xml as part xcvu9p-flga2104-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu118:part0:2.4 available at C:/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu118/2.4/board.xml as part xcvu9p-flga2104-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu128:part0:1.0 available at C:/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu128/production/1.0/board.xml as part xcvu37p-fsvh2892-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu129:part0:1.0 available at C:/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu129/production/1.0/board.xml as part xcvu29p-fsga2577-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu1525:part0:1.3 available at C:/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu1525/1.3/board.xml as part xcvu9p-fsgd2104-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vek280_es:part0:1.0 available at C:/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vek280/es/1.0/board.xml as part xcve2802-vsvh1760-2lp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vermeo_t1_mpsoc:part0:1.0 available at C:/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vermeo_t1_mpsoc/1.0/board.xml as part xczu19eg-ffvd1760-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vermeo_t1_rfsoc:part0:1.0 available at C:/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vermeo_t1_rfsoc/1.0/board.xml as part xczu21dr-ffvd1156-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vhk158_es:part0:1.0 available at C:/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vhk158/es/1.0/board.xml as part xcvh1582-vsva3697-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vmk180:part0:2.2 available at C:/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vmk180/production/2.2/board.xml as part xcvm1802-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vmk180:part0:3.0 available at C:/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vmk180/production/3.0/board.xml as part xcvm1802-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vmk180:part0:3.1 available at C:/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vmk180/production/3.1/board.xml as part xcvm1802-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vmk180_newl:part0:1.0 available at C:/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vmk180_newl/production/1.0/board.xml as part xcvm1802-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk120:part0:1.0 available at C:/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vpk120/production/1.0/board.xml as part xcvp1202-vsva2785-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk120_es:part0:1.2 available at C:/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vpk120/es/1.2/board.xml as part xcvp1202-vsva2785-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk120_es_revb:part0:1.0 available at C:/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vpk120_revb/es/1.0/board.xml as part xcvp1202-vsva2785-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk180_es:part0:1.0 available at C:/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vpk180/es/1.0/board.xml as part xcvp1802-lsvc4072-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zc706:part0:1.4 available at C:/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zc706/1.4/board.xml as part xc7z045ffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu102:part0:3.3 available at C:/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu102/3.3/board.xml as part xczu9eg-ffvb1156-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu102:part0:3.4 available at C:/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu102/3.4/board.xml as part xczu9eg-ffvb1156-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu111:part0:1.2 available at C:/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu111/1.2/board.xml as part xczu28dr-ffvg1517-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu111:part0:1.3 available at C:/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu111/1.3/board.xml as part xczu28dr-ffvg1517-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu111:part0:1.4 available at C:/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu111/1.4/board.xml as part xczu28dr-ffvg1517-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu1275:part0:1.0 available at C:/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu1275/1.0/board.xml as part xczu29dr-ffvf1760-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu1285:part0:1.0 available at C:/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu1285/1.0/board.xml as part xczu39dr-ffvf1760-2-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu208:part0:2.0 available at C:/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu208/production/2.0/board.xml as part xczu48dr-fsvg1517-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu208ld:part0:2.0 available at C:/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu208ld/production/2.0/board.xml as part xczu58dr-fsvg1517-2-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu216:part0:2.0 available at C:/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu216/production/2.0/board.xml as part xczu49dr-ffvf1760-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu216ld:part0:2.0 available at C:/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu216ld/production/2.0/board.xml as part xczu59dr-ffvf1760-2-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu670:part0:2.0 available at C:/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu670/2.0/board.xml as part xczu67dr-fsve1156-2-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu670ld:part0:1.0 available at C:/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu670ld/1.0/board.xml as part xczu57dr-fsve1156-2-i specified in board_part file is either invalid or not available
+INFO: [filemgmt 56-3] Default IP Output Path : Could not find the directory 'C:/Users/DELL/Desktop/10680462_10670892/Progetto_reti/10680462_10670892.gen/sources_1'.
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2022.2/data/ip'.
+open_project: Time (s): cpu = 00:00:26 ; elapsed = 00:00:12 . Memory (MB): peak = 1115.324 ; gain = 303.426
+update_compile_order -fileset sources_1
+launch_simulation -mode post-synthesis -type functional
+Command: launch_simulation  -mode post-synthesis -type functional
+INFO: [Vivado 12-12493] Simulation top is 'project_tb'
+WARNING: [Vivado 12-13340] Unable to auto find GCC executables from simulator install path! (path not set)
+WARNING: [Vivado 12-13277] Compiled library path does not exist: ''
+INFO: [Vivado 12-5682] Launching post-synthesis functional simulation in 'C:/Users/DELL/Desktop/10680462_10670892/Progetto_reti/10680462_10670892.sim/sim_1/synth/func/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from 'C:/Xilinx/Vivado/2022.2/tps/boost_1_72_0'
+Design is defaulting to impl run constrset: constrs_1
+Design is defaulting to synth run part: xc7a200tfbg484-1
+INFO: [Device 21-403] Loading part xc7a200tfbg484-1
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1529.938 ; gain = 0.000
+INFO: [Project 1-479] Netlist was created with Vivado 2022.2
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Parsing XDC File [C:/Users/DELL/Desktop/10680462_10670892/Progetto_reti/10680462_10670892.srcs/constrs_1/new/clock.xdc]
+Finished Parsing XDC File [C:/Users/DELL/Desktop/10680462_10670892/Progetto_reti/10680462_10670892.srcs/constrs_1/new/clock.xdc]
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1645.199 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+open_run: Time (s): cpu = 00:00:23 ; elapsed = 00:00:16 . Memory (MB): peak = 1761.758 ; gain = 620.203
+INFO: [SIM-utils-24] Writing simulation netlist file for design 'synth_1'...
+INFO: [SIM-utils-26] write_vhdl -mode funcsim -nolib -force -file "C:/Users/DELL/Desktop/10680462_10670892/Progetto_reti/10680462_10670892.sim/sim_1/synth/func/xsim/project_tb_func_synth.vhd"
+INFO: [SIM-utils-36] Netlist generated:C:/Users/DELL/Desktop/10680462_10670892/Progetto_reti/10680462_10670892.sim/sim_1/synth/func/xsim/project_tb_func_synth.vhd
+INFO: [SIM-utils-54] Inspecting design source files for 'project_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/DELL/Desktop/10680462_10670892/Progetto_reti/10680462_10670892.sim/sim_1/synth/func/xsim'
+"xvhdl --incr --relax -prj project_tb_vhdl.prj"
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/DELL/Desktop/10680462_10670892/Progetto_reti/10680462_10670892.sim/sim_1/synth/func/xsim/project_tb_func_synth.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'datapath'
+INFO: [VRFC 10-3107] analyzing entity 'project_reti_logiche'
+INFO: [USF-XSim-69] 'compile' step finished in '3' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/DELL/Desktop/10680462_10670892/Progetto_reti/10680462_10670892.sim/sim_1/synth/func/xsim'
+"xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot project_tb_func_synth xil_defaultlib.project_tb -log elaborate.log"
+Vivado Simulator v2022.2
+Copyright 1986-1999, 2001-2022 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2022.2/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot project_tb_func_synth xil_defaultlib.project_tb -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.numeric_std
+Compiling package ieee.std_logic_arith
+Compiling package ieee.std_logic_unsigned
+Compiling package unisim.vcomponents
+Compiling package ieee.vital_timing
+Compiling package ieee.vital_primitives
+Compiling package unisim.vpkg
+Compiling architecture lut5_v of entity unisim.LUT5 [\LUT5(init="00000000000100011110...]
+Compiling architecture lut6_v of entity unisim.LUT6 [\LUT6(init="00000000000000000001...]
+Compiling architecture lut6_v of entity unisim.LUT6 [\LUT6(init="00000000000000000000...]
+Compiling architecture lut6_v of entity unisim.LUT6 [\LUT6(init="00000000111111110000...]
+Compiling architecture lut5_v of entity unisim.LUT5 [\LUT5(init="00000000000010000000...]
+Compiling architecture lut4_v of entity unisim.LUT4 [\LUT4(init="0001000000000000")(0...]
+Compiling architecture fdce_v of entity unisim.FDCE [fdce_default]
+Compiling architecture lut4_v of entity unisim.LUT4 [\LUT4(init="0010000000000000")(0...]
+Compiling architecture lut4_v of entity unisim.LUT4 [\LUT4(init="0000000000010000")(0...]
+Compiling architecture lut4_v of entity unisim.LUT4 [\LUT4(init="0001101101011011")(0...]
+Compiling architecture lut6_v of entity unisim.LUT6 [\LUT6(init="11111110101110101110...]
+Compiling architecture fdre_v of entity unisim.FDRE [fdre_default]
+Compiling architecture structure of entity xil_defaultlib.datapath [datapath_default]
+Compiling architecture lut5_v of entity unisim.LUT5 [\LUT5(init="00000000111111110011...]
+Compiling architecture bufg_v of entity unisim.BUFG [bufg_default]
+Compiling architecture ibuf_v of entity unisim.IBUF [\IBUF(1,4)(1,9)(1,1)(1,4)(1,7)\]
+Compiling architecture obuf_v of entity unisim.OBUF [\OBUF(1,9)(1,7)(1,4)\]
+Compiling architecture structure of entity xil_defaultlib.project_reti_logiche [project_reti_logiche_default]
+Compiling architecture projecttb of entity xil_defaultlib.project_tb
+Built simulation snapshot project_tb_func_synth
+run_program: Time (s): cpu = 00:00:08 ; elapsed = 00:00:07 . Memory (MB): peak = 1927.820 ; gain = 140.516
+INFO: [USF-XSim-69] 'elaborate' step finished in '7' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/DELL/Desktop/10680462_10670892/Progetto_reti/10680462_10670892.sim/sim_1/synth/func/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "project_tb_func_synth -key {Post-Synthesis:sim_1:Functional:project_tb} -tclbatch {project_tb.tcl} -view {C:/Users/DELL/Desktop/10680462_10670892/Progetto_reti/behav_with_regs.wcfg} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Time resolution is 1 ps
+open_wave_config C:/Users/DELL/Desktop/10680462_10670892/Progetto_reti/behav_with_regs.wcfg
+WARNING: Simulation object /project_tb/UUT/DATAPATH0/rw_load was not found in the design.
+WARNING: Simulation object /project_tb/UUT/DATAPATH0/reg_z was not found in the design.
+WARNING: Simulation object /project_tb/UUT/DATAPATH0/reg_w was not found in the design.
+source project_tb.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 3600ns
+Failure: TEST FALLITO (Z3 != 456)
+Time: 3500100 ps  Iteration: 0  Process: /project_tb/testRoutine  File: C:/Users/DELL/Desktop/UNI/Reti Logiche/tb_5.vhd
+$finish called at time : 3500100 ps : File "C:/Users/DELL/Desktop/UNI/Reti Logiche/tb_5.vhd" Line 153
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'project_tb_func_synth' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 3600ns
+launch_simulation: Time (s): cpu = 00:00:54 ; elapsed = 00:00:33 . Memory (MB): peak = 2290.820 ; gain = 1149.266
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-12493] Simulation top is 'project_tb'
+WARNING: [Vivado 12-13340] Unable to auto find GCC executables from simulator install path! (path not set)
+WARNING: [Vivado 12-13277] Compiled library path does not exist: ''
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/DELL/Desktop/10680462_10670892/Progetto_reti/10680462_10670892.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from 'C:/Xilinx/Vivado/2022.2/tps/boost_1_72_0'
+INFO: [SIM-utils-54] Inspecting design source files for 'project_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/DELL/Desktop/10680462_10670892/Progetto_reti/10680462_10670892.sim/sim_1/behav/xsim'
+"xvhdl --incr --relax -prj project_tb_vhdl.prj"
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/DELL/Desktop/10680462_10670892/Progetto_reti/10680462_10670892.sim/sim_1/behav/xsim'
+"xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot project_tb_behav xil_defaultlib.project_tb -log elaborate.log"
+Vivado Simulator v2022.2
+Copyright 1986-1999, 2001-2022 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2022.2/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot project_tb_behav xil_defaultlib.project_tb -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
+INFO: [USF-XSim-69] 'elaborate' step finished in '3' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/DELL/Desktop/10680462_10670892/Progetto_reti/10680462_10670892.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "project_tb_behav -key {Behavioral:sim_1:Functional:project_tb} -tclbatch {project_tb.tcl} -view {C:/Users/DELL/Desktop/10680462_10670892/Progetto_reti/behav_with_regs.wcfg} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Time resolution is 1 ps
+open_wave_config C:/Users/DELL/Desktop/10680462_10670892/Progetto_reti/behav_with_regs.wcfg
+source project_tb.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 3600ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'project_tb_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 3600ns
+launch_simulation: Time (s): cpu = 00:00:04 ; elapsed = 00:00:08 . Memory (MB): peak = 2475.320 ; gain = 10.859
+run 50000 ns
+run 50000 ns
+Failure: Simulation Ended! TEST PASSATO (EXAMPLE)
+Time: 62300 ns  Iteration: 0  Process: /project_tb/testRoutine  File: C:/Users/DELL/Desktop/UNI/Reti Logiche/tb_5.vhd
+$finish called at time : 62300 ns : File "C:/Users/DELL/Desktop/UNI/Reti Logiche/tb_5.vhd" Line 542
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+reset_run synth_1
+INFO: [Project 1-1160] Copying file C:/Users/DELL/Desktop/10680462_10670892/Progetto_reti/10680462_10670892.runs/synth_1/project_reti_logiche.dcp to C:/Users/DELL/Desktop/10680462_10670892/Progetto_reti/10680462_10670892.srcs/utils_1/imports/synth_1 and adding it to utils fileset
+launch_runs synth_1 -jobs 4
+[Tue Mar  7 17:09:15 2023] Launched synth_1...
+Run output will be captured here: C:/Users/DELL/Desktop/10680462_10670892/Progetto_reti/10680462_10670892.runs/synth_1/runme.log
+close_design
+open_run synth_1 -name synth_1
+Design is defaulting to impl run constrset: constrs_1
+Design is defaulting to synth run part: xc7a200tfbg484-1
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 2475.320 ; gain = 0.000
+INFO: [Project 1-479] Netlist was created with Vivado 2022.2
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Parsing XDC File [C:/Users/DELL/Desktop/10680462_10670892/Progetto_reti/10680462_10670892.srcs/constrs_1/new/clock.xdc]
+Finished Parsing XDC File [C:/Users/DELL/Desktop/10680462_10670892/Progetto_reti/10680462_10670892.srcs/constrs_1/new/clock.xdc]
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2475.320 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+launch_simulation -mode post-synthesis -type functional
+Command: launch_simulation  -mode post-synthesis -type functional
+INFO: [Vivado 12-12493] Simulation top is 'project_tb'
+WARNING: [Vivado 12-13340] Unable to auto find GCC executables from simulator install path! (path not set)
+WARNING: [Vivado 12-13277] Compiled library path does not exist: ''
+INFO: [Vivado 12-5682] Launching post-synthesis functional simulation in 'C:/Users/DELL/Desktop/10680462_10670892/Progetto_reti/10680462_10670892.sim/sim_1/synth/func/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from 'C:/Xilinx/Vivado/2022.2/tps/boost_1_72_0'
+INFO: [SIM-utils-24] Writing simulation netlist file for design 'synth_1'...
+INFO: [SIM-utils-26] write_vhdl -mode funcsim -nolib -force -file "C:/Users/DELL/Desktop/10680462_10670892/Progetto_reti/10680462_10670892.sim/sim_1/synth/func/xsim/project_tb_func_synth.vhd"
+INFO: [SIM-utils-36] Netlist generated:C:/Users/DELL/Desktop/10680462_10670892/Progetto_reti/10680462_10670892.sim/sim_1/synth/func/xsim/project_tb_func_synth.vhd
+INFO: [SIM-utils-54] Inspecting design source files for 'project_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/DELL/Desktop/10680462_10670892/Progetto_reti/10680462_10670892.sim/sim_1/synth/func/xsim'
+"xvhdl --incr --relax -prj project_tb_vhdl.prj"
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/DELL/Desktop/10680462_10670892/Progetto_reti/10680462_10670892.sim/sim_1/synth/func/xsim/project_tb_func_synth.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'datapath'
+INFO: [VRFC 10-3107] analyzing entity 'project_reti_logiche'
+INFO: [USF-XSim-69] 'compile' step finished in '4' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/DELL/Desktop/10680462_10670892/Progetto_reti/10680462_10670892.sim/sim_1/synth/func/xsim'
+"xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot project_tb_func_synth xil_defaultlib.project_tb -log elaborate.log"
+Vivado Simulator v2022.2
+Copyright 1986-1999, 2001-2022 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2022.2/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot project_tb_func_synth xil_defaultlib.project_tb -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.numeric_std
+Compiling package ieee.std_logic_arith
+Compiling package ieee.std_logic_unsigned
+Compiling package unisim.vcomponents
+Compiling package ieee.vital_timing
+Compiling package ieee.vital_primitives
+Compiling package unisim.vpkg
+Compiling architecture lut5_v of entity unisim.LUT5 [\LUT5(init="00000000000100011110...]
+Compiling architecture lut6_v of entity unisim.LUT6 [\LUT6(init="00000000000000000001...]
+Compiling architecture lut6_v of entity unisim.LUT6 [\LUT6(init="00000000000000000000...]
+Compiling architecture lut6_v of entity unisim.LUT6 [\LUT6(init="00000000111111110000...]
+Compiling architecture lut5_v of entity unisim.LUT5 [\LUT5(init="00000000000010000000...]
+Compiling architecture lut4_v of entity unisim.LUT4 [\LUT4(init="0001000000000000")(0...]
+Compiling architecture fdce_v of entity unisim.FDCE [fdce_default]
+Compiling architecture lut4_v of entity unisim.LUT4 [\LUT4(init="0010000000000000")(0...]
+Compiling architecture lut4_v of entity unisim.LUT4 [\LUT4(init="0000000000010000")(0...]
+Compiling architecture lut4_v of entity unisim.LUT4 [\LUT4(init="0001101101011011")(0...]
+Compiling architecture lut6_v of entity unisim.LUT6 [\LUT6(init="11111110101110101110...]
+Compiling architecture fdre_v of entity unisim.FDRE [fdre_default]
+Compiling architecture structure of entity xil_defaultlib.datapath [datapath_default]
+Compiling architecture lut5_v of entity unisim.LUT5 [\LUT5(init="00000000111111110011...]
+Compiling architecture bufg_v of entity unisim.BUFG [bufg_default]
+Compiling architecture ibuf_v of entity unisim.IBUF [\IBUF(1,4)(1,9)(1,1)(1,4)(1,7)\]
+Compiling architecture obuf_v of entity unisim.OBUF [\OBUF(1,9)(1,7)(1,4)\]
+Compiling architecture structure of entity xil_defaultlib.project_reti_logiche [project_reti_logiche_default]
+Compiling architecture projecttb of entity xil_defaultlib.project_tb
+Built simulation snapshot project_tb_func_synth
+run_program: Time (s): cpu = 00:00:01 ; elapsed = 00:00:09 . Memory (MB): peak = 2475.320 ; gain = 0.000
+INFO: [USF-XSim-69] 'elaborate' step finished in '10' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/DELL/Desktop/10680462_10670892/Progetto_reti/10680462_10670892.sim/sim_1/synth/func/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "project_tb_func_synth -key {Post-Synthesis:sim_1:Functional:project_tb} -tclbatch {project_tb.tcl} -view {C:/Users/DELL/Desktop/10680462_10670892/Progetto_reti/behav_with_regs.wcfg} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Time resolution is 1 ps
+open_wave_config C:/Users/DELL/Desktop/10680462_10670892/Progetto_reti/behav_with_regs.wcfg
+WARNING: Simulation object /project_tb/UUT/DATAPATH0/rw_load was not found in the design.
+WARNING: Simulation object /project_tb/UUT/DATAPATH0/reg_z was not found in the design.
+WARNING: Simulation object /project_tb/UUT/DATAPATH0/reg_w was not found in the design.
+source project_tb.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 3600ns
+Failure: TEST FALLITO (Z3 != 456)
+Time: 3500100 ps  Iteration: 0  Process: /project_tb/testRoutine  File: C:/Users/DELL/Desktop/UNI/Reti Logiche/tb_5.vhd
+$finish called at time : 3500100 ps : File "C:/Users/DELL/Desktop/UNI/Reti Logiche/tb_5.vhd" Line 153
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'project_tb_func_synth' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 3600ns
+launch_simulation: Time (s): cpu = 00:00:04 ; elapsed = 00:00:17 . Memory (MB): peak = 2475.320 ; gain = 0.000
+reset_run synth_1
+INFO: [Project 1-1161] Replacing file C:/Users/DELL/Desktop/10680462_10670892/Progetto_reti/10680462_10670892.srcs/utils_1/imports/synth_1/project_reti_logiche.dcp with file C:/Users/DELL/Desktop/10680462_10670892/Progetto_reti/10680462_10670892.runs/synth_1/project_reti_logiche.dcp
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory C:/Users/DELL/Desktop/10680462_10670892/Progetto_reti/10680462_10670892.runs/synth_1
+
+launch_runs synth_1 -jobs 4
+[Tue Mar  7 17:13:35 2023] Launched synth_1...
+Run output will be captured here: C:/Users/DELL/Desktop/10680462_10670892/Progetto_reti/10680462_10670892.runs/synth_1/runme.log
+close_design
+open_run synth_1 -name synth_1
+Design is defaulting to impl run constrset: constrs_1
+Design is defaulting to synth run part: xc7a200tfbg484-1
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 2475.320 ; gain = 0.000
+INFO: [Project 1-479] Netlist was created with Vivado 2022.2
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Parsing XDC File [C:/Users/DELL/Desktop/10680462_10670892/Progetto_reti/10680462_10670892.srcs/constrs_1/new/clock.xdc]
+Finished Parsing XDC File [C:/Users/DELL/Desktop/10680462_10670892/Progetto_reti/10680462_10670892.srcs/constrs_1/new/clock.xdc]
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2475.320 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+report_utilization
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2022.2 (win64) Build 3671981 Fri Oct 14 05:00:03 MDT 2022
+| Date         : Tue Mar  7 17:15:24 2023
+| Host         : DESKTOP-UR6F32S running 64-bit major release  (build 9200)
+| Command      : report_utilization
+| Design       : project_reti_logiche
+| Device       : xc7a200tfbg484-1
+| Speed File   : -1
+| Design State : Synthesized
+------------------------------------------------------------------------------------
+
+Utilization Design Information
+
+Table of Contents
+-----------------
+1. Slice Logic
+1.1 Summary of Registers by Type
+2. Memory
+3. DSP
+4. IO and GT Specific
+5. Clocking
+6. Specific Feature
+7. Primitives
+8. Black Boxes
+9. Instantiated Netlists
+
+1. Slice Logic
+--------------
+
++-------------------------+------+-------+------------+-----------+-------+
+|        Site Type        | Used | Fixed | Prohibited | Available | Util% |
++-------------------------+------+-------+------------+-----------+-------+
+| Slice LUTs*             |   46 |     0 |          0 |    134600 |  0.03 |
+|   LUT as Logic          |   46 |     0 |          0 |    134600 |  0.03 |
+|   LUT as Memory         |    0 |     0 |          0 |     46200 |  0.00 |
+| Slice Registers         |   55 |     0 |          0 |    269200 |  0.02 |
+|   Register as Flip Flop |   54 |     0 |          0 |    269200 |  0.02 |
+|   Register as Latch     |    1 |     0 |          0 |    269200 | <0.01 |
+| F7 Muxes                |    0 |     0 |          0 |     67300 |  0.00 |
+| F8 Muxes                |    0 |     0 |          0 |     33650 |  0.00 |
++-------------------------+------+-------+------------+-----------+-------+
+* Warning! The Final LUT count, after physical optimizations and full implementation, is typically lower. Run opt_design after synthesis, if not already completed, for a more realistic count.
+Warning! LUT value is adjusted to account for LUT combining.
+
+
+1.1 Summary of Registers by Type
+--------------------------------
+
++-------+--------------+-------------+--------------+
+| Total | Clock Enable | Synchronous | Asynchronous |
++-------+--------------+-------------+--------------+
+| 0     |            _ |           - |            - |
+| 0     |            _ |           - |          Set |
+| 0     |            _ |           - |        Reset |
+| 0     |            _ |         Set |            - |
+| 0     |            _ |       Reset |            - |
+| 0     |          Yes |           - |            - |
+| 0     |          Yes |           - |          Set |
+| 38    |          Yes |           - |        Reset |
+| 0     |          Yes |         Set |            - |
+| 17    |          Yes |       Reset |            - |
++-------+--------------+-------------+--------------+
+
+
+2. Memory
+---------
+
++----------------+------+-------+------------+-----------+-------+
+|    Site Type   | Used | Fixed | Prohibited | Available | Util% |
++----------------+------+-------+------------+-----------+-------+
+| Block RAM Tile |    0 |     0 |          0 |       365 |  0.00 |
+|   RAMB36/FIFO* |    0 |     0 |          0 |       365 |  0.00 |
+|   RAMB18       |    0 |     0 |          0 |       730 |  0.00 |
++----------------+------+-------+------------+-----------+-------+
+* Note: Each Block RAM Tile only has one FIFO logic available and therefore can accommodate only one FIFO36E1 or one FIFO18E1. However, if a FIFO18E1 occupies a Block RAM Tile, that tile can still accommodate a RAMB18E1
+
+
+3. DSP
+------
+
++-----------+------+-------+------------+-----------+-------+
+| Site Type | Used | Fixed | Prohibited | Available | Util% |
++-----------+------+-------+------------+-----------+-------+
+| DSPs      |    0 |     0 |          0 |       740 |  0.00 |
++-----------+------+-------+------------+-----------+-------+
+
+
+4. IO and GT Specific
+---------------------
+
++-----------------------------+------+-------+------------+-----------+-------+
+|          Site Type          | Used | Fixed | Prohibited | Available | Util% |
++-----------------------------+------+-------+------------+-----------+-------+
+| Bonded IOB                  |   63 |     0 |          0 |       285 | 22.11 |
+| Bonded IPADs                |    0 |     0 |          0 |        14 |  0.00 |
+| Bonded OPADs                |    0 |     0 |          0 |         8 |  0.00 |
+| PHY_CONTROL                 |    0 |     0 |          0 |        10 |  0.00 |
+| PHASER_REF                  |    0 |     0 |          0 |        10 |  0.00 |
+| OUT_FIFO                    |    0 |     0 |          0 |        40 |  0.00 |
+| IN_FIFO                     |    0 |     0 |          0 |        40 |  0.00 |
+| IDELAYCTRL                  |    0 |     0 |          0 |        10 |  0.00 |
+| IBUFDS                      |    0 |     0 |          0 |       274 |  0.00 |
+| GTPE2_CHANNEL               |    0 |     0 |          0 |         4 |  0.00 |
+| PHASER_OUT/PHASER_OUT_PHY   |    0 |     0 |          0 |        40 |  0.00 |
+| PHASER_IN/PHASER_IN_PHY     |    0 |     0 |          0 |        40 |  0.00 |
+| IDELAYE2/IDELAYE2_FINEDELAY |    0 |     0 |          0 |       500 |  0.00 |
+| IBUFDS_GTE2                 |    0 |     0 |          0 |         2 |  0.00 |
+| ILOGIC                      |    0 |     0 |          0 |       285 |  0.00 |
+| OLOGIC                      |    0 |     0 |          0 |       285 |  0.00 |
++-----------------------------+------+-------+------------+-----------+-------+
+
+
+5. Clocking
+-----------
+
++------------+------+-------+------------+-----------+-------+
+|  Site Type | Used | Fixed | Prohibited | Available | Util% |
++------------+------+-------+------------+-----------+-------+
+| BUFGCTRL   |    1 |     0 |          0 |        32 |  3.13 |
+| BUFIO      |    0 |     0 |          0 |        40 |  0.00 |
+| MMCME2_ADV |    0 |     0 |          0 |        10 |  0.00 |
+| PLLE2_ADV  |    0 |     0 |          0 |        10 |  0.00 |
+| BUFMRCE    |    0 |     0 |          0 |        20 |  0.00 |
+| BUFHCE     |    0 |     0 |          0 |       120 |  0.00 |
+| BUFR       |    0 |     0 |          0 |        40 |  0.00 |
++------------+------+-------+------------+-----------+-------+
+
+
+6. Specific Feature
+-------------------
+
++-------------+------+-------+------------+-----------+-------+
+|  Site Type  | Used | Fixed | Prohibited | Available | Util% |
++-------------+------+-------+------------+-----------+-------+
+| BSCANE2     |    0 |     0 |          0 |         4 |  0.00 |
+| CAPTUREE2   |    0 |     0 |          0 |         1 |  0.00 |
+| DNA_PORT    |    0 |     0 |          0 |         1 |  0.00 |
+| EFUSE_USR   |    0 |     0 |          0 |         1 |  0.00 |
+| FRAME_ECCE2 |    0 |     0 |          0 |         1 |  0.00 |
+| ICAPE2      |    0 |     0 |          0 |         2 |  0.00 |
+| PCIE_2_1    |    0 |     0 |          0 |         1 |  0.00 |
+| STARTUPE2   |    0 |     0 |          0 |         1 |  0.00 |
+| XADC        |    0 |     0 |          0 |         1 |  0.00 |
++-------------+------+-------+------------+-----------+-------+
+
+
+7. Primitives
+-------------
+
++----------+------+---------------------+
+| Ref Name | Used | Functional Category |
++----------+------+---------------------+
+| OBUF     |   51 |                  IO |
+| FDCE     |   37 |        Flop & Latch |
+| LUT5     |   34 |                 LUT |
+| FDRE     |   17 |        Flop & Latch |
+| IBUF     |   12 |                  IO |
+| LUT4     |    8 |                 LUT |
+| LUT6     |    4 |                 LUT |
+| LUT2     |    2 |                 LUT |
+| LDCE     |    1 |        Flop & Latch |
+| BUFG     |    1 |               Clock |
++----------+------+---------------------+
+
+
+8. Black Boxes
+--------------
+
++----------+------+
+| Ref Name | Used |
++----------+------+
+
+
+9. Instantiated Netlists
+------------------------
+
++----------+------+
+| Ref Name | Used |
++----------+------+
+
+
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation -mode post-synthesis -type functional
+Command: launch_simulation  -mode post-synthesis -type functional
+INFO: [Vivado 12-12493] Simulation top is 'project_tb'
+WARNING: [Vivado 12-13340] Unable to auto find GCC executables from simulator install path! (path not set)
+WARNING: [Vivado 12-13277] Compiled library path does not exist: ''
+INFO: [Vivado 12-5682] Launching post-synthesis functional simulation in 'C:/Users/DELL/Desktop/10680462_10670892/Progetto_reti/10680462_10670892.sim/sim_1/synth/func/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from 'C:/Xilinx/Vivado/2022.2/tps/boost_1_72_0'
+INFO: [SIM-utils-24] Writing simulation netlist file for design 'synth_1'...
+INFO: [SIM-utils-26] write_vhdl -mode funcsim -nolib -force -file "C:/Users/DELL/Desktop/10680462_10670892/Progetto_reti/10680462_10670892.sim/sim_1/synth/func/xsim/project_tb_func_synth.vhd"
+INFO: [SIM-utils-36] Netlist generated:C:/Users/DELL/Desktop/10680462_10670892/Progetto_reti/10680462_10670892.sim/sim_1/synth/func/xsim/project_tb_func_synth.vhd
+INFO: [SIM-utils-54] Inspecting design source files for 'project_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/DELL/Desktop/10680462_10670892/Progetto_reti/10680462_10670892.sim/sim_1/synth/func/xsim'
+"xvhdl --incr --relax -prj project_tb_vhdl.prj"
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/DELL/Desktop/10680462_10670892/Progetto_reti/10680462_10670892.sim/sim_1/synth/func/xsim/project_tb_func_synth.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'datapath'
+INFO: [VRFC 10-3107] analyzing entity 'project_reti_logiche'
+INFO: [USF-XSim-69] 'compile' step finished in '4' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/DELL/Desktop/10680462_10670892/Progetto_reti/10680462_10670892.sim/sim_1/synth/func/xsim'
+"xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot project_tb_func_synth xil_defaultlib.project_tb -log elaborate.log"
+Vivado Simulator v2022.2
+Copyright 1986-1999, 2001-2022 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2022.2/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot project_tb_func_synth xil_defaultlib.project_tb -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.numeric_std
+Compiling package ieee.std_logic_arith
+Compiling package ieee.std_logic_unsigned
+Compiling package unisim.vcomponents
+Compiling package ieee.vital_timing
+Compiling package ieee.vital_primitives
+Compiling package unisim.vpkg
+Compiling architecture lut5_v of entity unisim.LUT5 [\LUT5(init="00000000000100011110...]
+Compiling architecture lut6_v of entity unisim.LUT6 [\LUT6(init="00000000000000000001...]
+Compiling architecture lut6_v of entity unisim.LUT6 [\LUT6(init="00000000000000000000...]
+Compiling architecture lut6_v of entity unisim.LUT6 [\LUT6(init="00000000111111110000...]
+Compiling architecture lut5_v of entity unisim.LUT5 [\LUT5(init="00000000000010000000...]
+Compiling architecture lut2_v of entity unisim.LUT2 [\LUT2(init="0010")(0,3)\]
+Compiling architecture fdre_v of entity unisim.FDRE [fdre_default]
+Compiling architecture lut4_v of entity unisim.LUT4 [\LUT4(init="0001000000000000")(0...]
+Compiling architecture fdce_v of entity unisim.FDCE [fdce_default]
+Compiling architecture lut4_v of entity unisim.LUT4 [\LUT4(init="0010000000000000")(0...]
+Compiling architecture lut4_v of entity unisim.LUT4 [\LUT4(init="0000000000010000")(0...]
+Compiling architecture lut4_v of entity unisim.LUT4 [\LUT4(init="0001101101011011")(0...]
+Compiling architecture lut6_v of entity unisim.LUT6 [\LUT6(init="11111110101110101110...]
+Compiling architecture structure of entity xil_defaultlib.datapath [datapath_default]
+Compiling architecture lut5_v of entity unisim.LUT5 [\LUT5(init="00000000111111110011...]
+Compiling architecture bufg_v of entity unisim.BUFG [bufg_default]
+Compiling architecture ibuf_v of entity unisim.IBUF [\IBUF(1,4)(1,9)(1,1)(1,4)(1,7)\]
+Compiling architecture obuf_v of entity unisim.OBUF [\OBUF(1,9)(1,7)(1,4)\]
+Compiling architecture ldce_v of entity unisim.LDCE [ldce_default]
+Compiling architecture lut2_v of entity unisim.LUT2 [\LUT2(init="0001")(0,3)\]
+Compiling architecture lut4_v of entity unisim.LUT4 [\LUT4(init="0011000100111100")(0...]
+Compiling architecture structure of entity xil_defaultlib.project_reti_logiche [project_reti_logiche_default]
+Compiling architecture projecttb of entity xil_defaultlib.project_tb
+Built simulation snapshot project_tb_func_synth
+run_program: Time (s): cpu = 00:00:00 ; elapsed = 00:00:11 . Memory (MB): peak = 2475.320 ; gain = 0.000
+INFO: [USF-XSim-69] 'elaborate' step finished in '11' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/DELL/Desktop/10680462_10670892/Progetto_reti/10680462_10670892.sim/sim_1/synth/func/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "project_tb_func_synth -key {Post-Synthesis:sim_1:Functional:project_tb} -tclbatch {project_tb.tcl} -view {C:/Users/DELL/Desktop/10680462_10670892/Progetto_reti/behav_with_regs.wcfg} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Time resolution is 1 ps
+open_wave_config C:/Users/DELL/Desktop/10680462_10670892/Progetto_reti/behav_with_regs.wcfg
+WARNING: Simulation object /project_tb/UUT/DATAPATH0/reg_z was not found in the design.
+WARNING: Simulation object /project_tb/UUT/DATAPATH0/reg_w was not found in the design.
+source project_tb.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 3600ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'project_tb_func_synth' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 3600ns
+launch_simulation: Time (s): cpu = 00:00:05 ; elapsed = 00:00:19 . Memory (MB): peak = 2475.320 ; gain = 0.000
+run 50000 ns
+run 50000 ns
+Failure: Simulation Ended! TEST PASSATO (EXAMPLE)
+Time: 62300100 ps  Iteration: 0  Process: /project_tb/testRoutine  File: C:/Users/DELL/Desktop/UNI/Reti Logiche/tb_5.vhd
+$finish called at time : 62300100 ps : File "C:/Users/DELL/Desktop/UNI/Reti Logiche/tb_5.vhd" Line 542
+reset_run synth_1
+INFO: [Project 1-1161] Replacing file C:/Users/DELL/Desktop/10680462_10670892/Progetto_reti/10680462_10670892.srcs/utils_1/imports/synth_1/project_reti_logiche.dcp with file C:/Users/DELL/Desktop/10680462_10670892/Progetto_reti/10680462_10670892.runs/synth_1/project_reti_logiche.dcp
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory C:/Users/DELL/Desktop/10680462_10670892/Progetto_reti/10680462_10670892.runs/synth_1
+
+launch_runs synth_1 -jobs 8
+[Tue Mar  7 17:18:35 2023] Launched synth_1...
+Run output will be captured here: C:/Users/DELL/Desktop/10680462_10670892/Progetto_reti/10680462_10670892.runs/synth_1/runme.log
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+close_design
+reset_run synth_1
+INFO: [Project 1-1161] Replacing file C:/Users/DELL/Desktop/10680462_10670892/Progetto_reti/10680462_10670892.srcs/utils_1/imports/synth_1/project_reti_logiche.dcp with file C:/Users/DELL/Desktop/10680462_10670892/Progetto_reti/10680462_10670892.runs/synth_1/project_reti_logiche.dcp
+launch_runs synth_1 -jobs 4
+[Tue Mar  7 17:22:02 2023] Launched synth_1...
+Run output will be captured here: C:/Users/DELL/Desktop/10680462_10670892/Progetto_reti/10680462_10670892.runs/synth_1/runme.log
+reset_run synth_1
+INFO: [Project 1-1161] Replacing file C:/Users/DELL/Desktop/10680462_10670892/Progetto_reti/10680462_10670892.srcs/utils_1/imports/synth_1/project_reti_logiche.dcp with file C:/Users/DELL/Desktop/10680462_10670892/Progetto_reti/10680462_10670892.runs/synth_1/project_reti_logiche.dcp
+launch_runs synth_1 -jobs 4
+[Tue Mar  7 17:24:34 2023] Launched synth_1...
+Run output will be captured here: C:/Users/DELL/Desktop/10680462_10670892/Progetto_reti/10680462_10670892.runs/synth_1/runme.log
+launch_simulation -mode post-synthesis -type functional
+Command: launch_simulation  -mode post-synthesis -type functional
+INFO: [Vivado 12-12493] Simulation top is 'project_tb'
+WARNING: [Vivado 12-13340] Unable to auto find GCC executables from simulator install path! (path not set)
+WARNING: [Vivado 12-13277] Compiled library path does not exist: ''
+INFO: [Vivado 12-5682] Launching post-synthesis functional simulation in 'C:/Users/DELL/Desktop/10680462_10670892/Progetto_reti/10680462_10670892.sim/sim_1/synth/func/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from 'C:/Xilinx/Vivado/2022.2/tps/boost_1_72_0'
+Design is defaulting to impl run constrset: constrs_1
+Design is defaulting to synth run part: xc7a200tfbg484-1
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 2475.320 ; gain = 0.000
+INFO: [Project 1-479] Netlist was created with Vivado 2022.2
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Parsing XDC File [C:/Users/DELL/Desktop/10680462_10670892/Progetto_reti/10680462_10670892.srcs/constrs_1/new/clock.xdc]
+Finished Parsing XDC File [C:/Users/DELL/Desktop/10680462_10670892/Progetto_reti/10680462_10670892.srcs/constrs_1/new/clock.xdc]
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2475.320 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [SIM-utils-24] Writing simulation netlist file for design 'synth_1'...
+INFO: [SIM-utils-26] write_vhdl -mode funcsim -nolib -force -file "C:/Users/DELL/Desktop/10680462_10670892/Progetto_reti/10680462_10670892.sim/sim_1/synth/func/xsim/project_tb_func_synth.vhd"
+INFO: [SIM-utils-36] Netlist generated:C:/Users/DELL/Desktop/10680462_10670892/Progetto_reti/10680462_10670892.sim/sim_1/synth/func/xsim/project_tb_func_synth.vhd
+INFO: [SIM-utils-54] Inspecting design source files for 'project_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/DELL/Desktop/10680462_10670892/Progetto_reti/10680462_10670892.sim/sim_1/synth/func/xsim'
+"xvhdl --incr --relax -prj project_tb_vhdl.prj"
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/DELL/Desktop/10680462_10670892/Progetto_reti/10680462_10670892.sim/sim_1/synth/func/xsim/project_tb_func_synth.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'datapath'
+INFO: [VRFC 10-3107] analyzing entity 'project_reti_logiche'
+INFO: [USF-XSim-69] 'compile' step finished in '4' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/DELL/Desktop/10680462_10670892/Progetto_reti/10680462_10670892.sim/sim_1/synth/func/xsim'
+"xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot project_tb_func_synth xil_defaultlib.project_tb -log elaborate.log"
+Vivado Simulator v2022.2
+Copyright 1986-1999, 2001-2022 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2022.2/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot project_tb_func_synth xil_defaultlib.project_tb -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.numeric_std
+Compiling package ieee.std_logic_arith
+Compiling package ieee.std_logic_unsigned
+Compiling package unisim.vcomponents
+Compiling package ieee.vital_timing
+Compiling package ieee.vital_primitives
+Compiling package unisim.vpkg
+Compiling architecture lut5_v of entity unisim.LUT5 [\LUT5(init="00000000000100011110...]
+Compiling architecture lut6_v of entity unisim.LUT6 [\LUT6(init="00000000000000000001...]
+Compiling architecture lut6_v of entity unisim.LUT6 [\LUT6(init="00000000000000000000...]
+Compiling architecture lut6_v of entity unisim.LUT6 [\LUT6(init="00000000111111110000...]
+Compiling architecture lut5_v of entity unisim.LUT5 [\LUT5(init="00000000000010000000...]
+Compiling architecture lut4_v of entity unisim.LUT4 [\LUT4(init="0001000000000000")(0...]
+Compiling architecture fdce_v of entity unisim.FDCE [fdce_default]
+Compiling architecture lut4_v of entity unisim.LUT4 [\LUT4(init="0010000000000000")(0...]
+Compiling architecture lut4_v of entity unisim.LUT4 [\LUT4(init="0000000000010000")(0...]
+Compiling architecture lut4_v of entity unisim.LUT4 [\LUT4(init="0001101101011011")(0...]
+Compiling architecture lut6_v of entity unisim.LUT6 [\LUT6(init="11111110101110101110...]
+Compiling architecture fdre_v of entity unisim.FDRE [fdre_default]
+Compiling architecture structure of entity xil_defaultlib.datapath [datapath_default]
+Compiling architecture lut5_v of entity unisim.LUT5 [\LUT5(init="00000000111111110011...]
+Compiling architecture bufg_v of entity unisim.BUFG [bufg_default]
+Compiling architecture ibuf_v of entity unisim.IBUF [\IBUF(1,4)(1,9)(1,1)(1,4)(1,7)\]
+Compiling architecture obuf_v of entity unisim.OBUF [\OBUF(1,9)(1,7)(1,4)\]
+Compiling architecture structure of entity xil_defaultlib.project_reti_logiche [project_reti_logiche_default]
+Compiling architecture projecttb of entity xil_defaultlib.project_tb
+Built simulation snapshot project_tb_func_synth
+run_program: Time (s): cpu = 00:00:00 ; elapsed = 00:00:09 . Memory (MB): peak = 2475.320 ; gain = 0.000
+INFO: [USF-XSim-69] 'elaborate' step finished in '9' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/DELL/Desktop/10680462_10670892/Progetto_reti/10680462_10670892.sim/sim_1/synth/func/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "project_tb_func_synth -key {Post-Synthesis:sim_1:Functional:project_tb} -tclbatch {project_tb.tcl} -view {C:/Users/DELL/Desktop/10680462_10670892/Progetto_reti/behav_with_regs.wcfg} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Time resolution is 1 ps
+open_wave_config C:/Users/DELL/Desktop/10680462_10670892/Progetto_reti/behav_with_regs.wcfg
+WARNING: Simulation object /project_tb/UUT/DATAPATH0/rw_load was not found in the design.
+WARNING: Simulation object /project_tb/UUT/DATAPATH0/reg_z was not found in the design.
+WARNING: Simulation object /project_tb/UUT/DATAPATH0/reg_w was not found in the design.
+source project_tb.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 3600ns
+Failure: TEST FALLITO (Z3 != 456)
+Time: 3500100 ps  Iteration: 0  Process: /project_tb/testRoutine  File: C:/Users/DELL/Desktop/UNI/Reti Logiche/tb_5.vhd
+$finish called at time : 3500100 ps : File "C:/Users/DELL/Desktop/UNI/Reti Logiche/tb_5.vhd" Line 153
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'project_tb_func_synth' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 3600ns
+launch_simulation: Time (s): cpu = 00:00:10 ; elapsed = 00:00:20 . Memory (MB): peak = 2475.320 ; gain = 0.000
+run 50000 ns
+Failure: TEST FALLITO (Z3 != 894)
+Time: 7000100 ps  Iteration: 0  Process: /project_tb/testRoutine  File: C:/Users/DELL/Desktop/UNI/Reti Logiche/tb_5.vhd
+$finish called at time : 7000100 ps : File "C:/Users/DELL/Desktop/UNI/Reti Logiche/tb_5.vhd" Line 173
+run all
+Failure: TEST FALLITO (Z3 != 6)
+Time: 10400100 ps  Iteration: 0  Process: /project_tb/testRoutine  File: C:/Users/DELL/Desktop/UNI/Reti Logiche/tb_5.vhd
+$finish called at time : 10400100 ps : File "C:/Users/DELL/Desktop/UNI/Reti Logiche/tb_5.vhd" Line 193
+run all
+Failure: TEST FALLITO (Z3 != 985)
+Time: 13700100 ps  Iteration: 0  Process: /project_tb/testRoutine  File: C:/Users/DELL/Desktop/UNI/Reti Logiche/tb_5.vhd
+$finish called at time : 13700100 ps : File "C:/Users/DELL/Desktop/UNI/Reti Logiche/tb_5.vhd" Line 213
+run all
+Failure: TEST FALLITO (Z2 != 420)
+Time: 16800100 ps  Iteration: 0  Process: /project_tb/testRoutine  File: C:/Users/DELL/Desktop/UNI/Reti Logiche/tb_5.vhd
+$finish called at time : 16800100 ps : File "C:/Users/DELL/Desktop/UNI/Reti Logiche/tb_5.vhd" Line 232
+run all
+Failure: TEST FALLITO (Z3 != 985)
+Time: 16800100 ps  Iteration: 0  Process: /project_tb/testRoutine  File: C:/Users/DELL/Desktop/UNI/Reti Logiche/tb_5.vhd
+$finish called at time : 16800100 ps : File "C:/Users/DELL/Desktop/UNI/Reti Logiche/tb_5.vhd" Line 233
+reset_run synth_1
+INFO: [Project 1-1161] Replacing file C:/Users/DELL/Desktop/10680462_10670892/Progetto_reti/10680462_10670892.srcs/utils_1/imports/synth_1/project_reti_logiche.dcp with file C:/Users/DELL/Desktop/10680462_10670892/Progetto_reti/10680462_10670892.runs/synth_1/project_reti_logiche.dcp
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory C:/Users/DELL/Desktop/10680462_10670892/Progetto_reti/10680462_10670892.runs/synth_1
+
+launch_runs synth_1 -jobs 4
+[Tue Mar  7 17:30:30 2023] Launched synth_1...
+Run output will be captured here: C:/Users/DELL/Desktop/10680462_10670892/Progetto_reti/10680462_10670892.runs/synth_1/runme.log
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+close_design
+launch_simulation -mode post-synthesis -type functional
+Command: launch_simulation  -mode post-synthesis -type functional
+INFO: [Vivado 12-12493] Simulation top is 'project_tb'
+WARNING: [Vivado 12-13340] Unable to auto find GCC executables from simulator install path! (path not set)
+WARNING: [Vivado 12-13277] Compiled library path does not exist: ''
+INFO: [Vivado 12-5682] Launching post-synthesis functional simulation in 'C:/Users/DELL/Desktop/10680462_10670892/Progetto_reti/10680462_10670892.sim/sim_1/synth/func/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from 'C:/Xilinx/Vivado/2022.2/tps/boost_1_72_0'
+Design is defaulting to impl run constrset: constrs_1
+Design is defaulting to synth run part: xc7a200tfbg484-1
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 2551.848 ; gain = 0.000
+INFO: [Project 1-479] Netlist was created with Vivado 2022.2
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Parsing XDC File [C:/Users/DELL/Desktop/10680462_10670892/Progetto_reti/10680462_10670892.srcs/constrs_1/new/clock.xdc]
+Finished Parsing XDC File [C:/Users/DELL/Desktop/10680462_10670892/Progetto_reti/10680462_10670892.srcs/constrs_1/new/clock.xdc]
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2551.848 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [SIM-utils-24] Writing simulation netlist file for design 'synth_1'...
+INFO: [SIM-utils-26] write_vhdl -mode funcsim -nolib -force -file "C:/Users/DELL/Desktop/10680462_10670892/Progetto_reti/10680462_10670892.sim/sim_1/synth/func/xsim/project_tb_func_synth.vhd"
+INFO: [SIM-utils-36] Netlist generated:C:/Users/DELL/Desktop/10680462_10670892/Progetto_reti/10680462_10670892.sim/sim_1/synth/func/xsim/project_tb_func_synth.vhd
+INFO: [SIM-utils-54] Inspecting design source files for 'project_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/DELL/Desktop/10680462_10670892/Progetto_reti/10680462_10670892.sim/sim_1/synth/func/xsim'
+"xvhdl --incr --relax -prj project_tb_vhdl.prj"
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/DELL/Desktop/10680462_10670892/Progetto_reti/10680462_10670892.sim/sim_1/synth/func/xsim/project_tb_func_synth.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'datapath'
+INFO: [VRFC 10-3107] analyzing entity 'project_reti_logiche'
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/DELL/Desktop/10680462_10670892/Progetto_reti/10680462_10670892.sim/sim_1/synth/func/xsim'
+"xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot project_tb_func_synth xil_defaultlib.project_tb -log elaborate.log"
+Vivado Simulator v2022.2
+Copyright 1986-1999, 2001-2022 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2022.2/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot project_tb_func_synth xil_defaultlib.project_tb -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.numeric_std
+Compiling package ieee.std_logic_arith
+Compiling package ieee.std_logic_unsigned
+Compiling package unisim.vcomponents
+Compiling package ieee.vital_timing
+Compiling package ieee.vital_primitives
+Compiling package unisim.vpkg
+Compiling architecture lut5_v of entity unisim.LUT5 [\LUT5(init="00000000000100011110...]
+Compiling architecture lut6_v of entity unisim.LUT6 [\LUT6(init="00000000000000000001...]
+Compiling architecture lut6_v of entity unisim.LUT6 [\LUT6(init="00000000000000000000...]
+Compiling architecture lut6_v of entity unisim.LUT6 [\LUT6(init="00000000111111110000...]
+Compiling architecture lut5_v of entity unisim.LUT5 [\LUT5(init="00000000000010000000...]
+Compiling architecture lut2_v of entity unisim.LUT2 [\LUT2(init="0010")(0,3)\]
+Compiling architecture fdre_v of entity unisim.FDRE [fdre_default]
+Compiling architecture lut4_v of entity unisim.LUT4 [\LUT4(init="0001000000000000")(0...]
+Compiling architecture fdce_v of entity unisim.FDCE [fdce_default]
+Compiling architecture lut4_v of entity unisim.LUT4 [\LUT4(init="0010000000000000")(0...]
+Compiling architecture lut4_v of entity unisim.LUT4 [\LUT4(init="0000000000010000")(0...]
+Compiling architecture lut4_v of entity unisim.LUT4 [\LUT4(init="0001101101011011")(0...]
+Compiling architecture lut6_v of entity unisim.LUT6 [\LUT6(init="11111110101110101110...]
+Compiling architecture structure of entity xil_defaultlib.datapath [datapath_default]
+Compiling architecture lut5_v of entity unisim.LUT5 [\LUT5(init="00000000111111110011...]
+Compiling architecture bufg_v of entity unisim.BUFG [bufg_default]
+Compiling architecture ibuf_v of entity unisim.IBUF [\IBUF(1,4)(1,9)(1,1)(1,4)(1,7)\]
+Compiling architecture obuf_v of entity unisim.OBUF [\OBUF(1,9)(1,7)(1,4)\]
+Compiling architecture ldce_v of entity unisim.LDCE [ldce_default]
+Compiling architecture lut2_v of entity unisim.LUT2 [\LUT2(init="0001")(0,3)\]
+Compiling architecture lut4_v of entity unisim.LUT4 [\LUT4(init="0011000100111100")(0...]
+Compiling architecture structure of entity xil_defaultlib.project_reti_logiche [project_reti_logiche_default]
+Compiling architecture projecttb of entity xil_defaultlib.project_tb
+Built simulation snapshot project_tb_func_synth
+run_program: Time (s): cpu = 00:00:00 ; elapsed = 00:00:07 . Memory (MB): peak = 2551.848 ; gain = 0.000
+INFO: [USF-XSim-69] 'elaborate' step finished in '7' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/DELL/Desktop/10680462_10670892/Progetto_reti/10680462_10670892.sim/sim_1/synth/func/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "project_tb_func_synth -key {Post-Synthesis:sim_1:Functional:project_tb} -tclbatch {project_tb.tcl} -view {C:/Users/DELL/Desktop/10680462_10670892/Progetto_reti/behav_with_regs.wcfg} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Time resolution is 1 ps
+open_wave_config C:/Users/DELL/Desktop/10680462_10670892/Progetto_reti/behav_with_regs.wcfg
+WARNING: Simulation object /project_tb/UUT/DATAPATH0/reg_z was not found in the design.
+WARNING: Simulation object /project_tb/UUT/DATAPATH0/reg_w was not found in the design.
+source project_tb.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 3600ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'project_tb_func_synth' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 3600ns
+launch_simulation: Time (s): cpu = 00:00:10 ; elapsed = 00:00:17 . Memory (MB): peak = 2551.848 ; gain = 0.000
+run 50000 ns
+run 50000 ns
+Failure: Simulation Ended! TEST PASSATO (EXAMPLE)
+Time: 62300100 ps  Iteration: 0  Process: /project_tb/testRoutine  File: C:/Users/DELL/Desktop/UNI/Reti Logiche/tb_5.vhd
+$finish called at time : 62300100 ps : File "C:/Users/DELL/Desktop/UNI/Reti Logiche/tb_5.vhd" Line 542
+report_uti
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2022.2 (win64) Build 3671981 Fri Oct 14 05:00:03 MDT 2022
+| Date         : Tue Mar  7 17:37:36 2023
+| Host         : DESKTOP-UR6F32S running 64-bit major release  (build 9200)
+| Command      : report_utilization
+| Design       : project_reti_logiche
+| Device       : xc7a200tfbg484-1
+| Speed File   : -1
+| Design State : Synthesized
+------------------------------------------------------------------------------------
+
+Utilization Design Information
+
+Table of Contents
+-----------------
+1. Slice Logic
+1.1 Summary of Registers by Type
+2. Memory
+3. DSP
+4. IO and GT Specific
+5. Clocking
+6. Specific Feature
+7. Primitives
+8. Black Boxes
+9. Instantiated Netlists
+
+1. Slice Logic
+--------------
+
++-------------------------+------+-------+------------+-----------+-------+
+|        Site Type        | Used | Fixed | Prohibited | Available | Util% |
++-------------------------+------+-------+------------+-----------+-------+
+| Slice LUTs*             |   46 |     0 |          0 |    134600 |  0.03 |
+|   LUT as Logic          |   46 |     0 |          0 |    134600 |  0.03 |
+|   LUT as Memory         |    0 |     0 |          0 |     46200 |  0.00 |
+| Slice Registers         |   55 |     0 |          0 |    269200 |  0.02 |
+|   Register as Flip Flop |   54 |     0 |          0 |    269200 |  0.02 |
+|   Register as Latch     |    1 |     0 |          0 |    269200 | <0.01 |
+| F7 Muxes                |    0 |     0 |          0 |     67300 |  0.00 |
+| F8 Muxes                |    0 |     0 |          0 |     33650 |  0.00 |
++-------------------------+------+-------+------------+-----------+-------+
+* Warning! The Final LUT count, after physical optimizations and full implementation, is typically lower. Run opt_design after synthesis, if not already completed, for a more realistic count.
+Warning! LUT value is adjusted to account for LUT combining.
+
+
+1.1 Summary of Registers by Type
+--------------------------------
+
++-------+--------------+-------------+--------------+
+| Total | Clock Enable | Synchronous | Asynchronous |
++-------+--------------+-------------+--------------+
+| 0     |            _ |           - |            - |
+| 0     |            _ |           - |          Set |
+| 0     |            _ |           - |        Reset |
+| 0     |            _ |         Set |            - |
+| 0     |            _ |       Reset |            - |
+| 0     |          Yes |           - |            - |
+| 0     |          Yes |           - |          Set |
+| 38    |          Yes |           - |        Reset |
+| 0     |          Yes |         Set |            - |
+| 17    |          Yes |       Reset |            - |
++-------+--------------+-------------+--------------+
+
+
+2. Memory
+---------
+
++----------------+------+-------+------------+-----------+-------+
+|    Site Type   | Used | Fixed | Prohibited | Available | Util% |
++----------------+------+-------+------------+-----------+-------+
+| Block RAM Tile |    0 |     0 |          0 |       365 |  0.00 |
+|   RAMB36/FIFO* |    0 |     0 |          0 |       365 |  0.00 |
+|   RAMB18       |    0 |     0 |          0 |       730 |  0.00 |
++----------------+------+-------+------------+-----------+-------+
+* Note: Each Block RAM Tile only has one FIFO logic available and therefore can accommodate only one FIFO36E1 or one FIFO18E1. However, if a FIFO18E1 occupies a Block RAM Tile, that tile can still accommodate a RAMB18E1
+
+
+3. DSP
+------
+
++-----------+------+-------+------------+-----------+-------+
+| Site Type | Used | Fixed | Prohibited | Available | Util% |
++-----------+------+-------+------------+-----------+-------+
+| DSPs      |    0 |     0 |          0 |       740 |  0.00 |
++-----------+------+-------+------------+-----------+-------+
+
+
+4. IO and GT Specific
+---------------------
+
++-----------------------------+------+-------+------------+-----------+-------+
+|          Site Type          | Used | Fixed | Prohibited | Available | Util% |
++-----------------------------+------+-------+------------+-----------+-------+
+| Bonded IOB                  |   63 |     0 |          0 |       285 | 22.11 |
+| Bonded IPADs                |    0 |     0 |          0 |        14 |  0.00 |
+| Bonded OPADs                |    0 |     0 |          0 |         8 |  0.00 |
+| PHY_CONTROL                 |    0 |     0 |          0 |        10 |  0.00 |
+| PHASER_REF                  |    0 |     0 |          0 |        10 |  0.00 |
+| OUT_FIFO                    |    0 |     0 |          0 |        40 |  0.00 |
+| IN_FIFO                     |    0 |     0 |          0 |        40 |  0.00 |
+| IDELAYCTRL                  |    0 |     0 |          0 |        10 |  0.00 |
+| IBUFDS                      |    0 |     0 |          0 |       274 |  0.00 |
+| GTPE2_CHANNEL               |    0 |     0 |          0 |         4 |  0.00 |
+| PHASER_OUT/PHASER_OUT_PHY   |    0 |     0 |          0 |        40 |  0.00 |
+| PHASER_IN/PHASER_IN_PHY     |    0 |     0 |          0 |        40 |  0.00 |
+| IDELAYE2/IDELAYE2_FINEDELAY |    0 |     0 |          0 |       500 |  0.00 |
+| IBUFDS_GTE2                 |    0 |     0 |          0 |         2 |  0.00 |
+| ILOGIC                      |    0 |     0 |          0 |       285 |  0.00 |
+| OLOGIC                      |    0 |     0 |          0 |       285 |  0.00 |
++-----------------------------+------+-------+------------+-----------+-------+
+
+
+5. Clocking
+-----------
+
++------------+------+-------+------------+-----------+-------+
+|  Site Type | Used | Fixed | Prohibited | Available | Util% |
++------------+------+-------+------------+-----------+-------+
+| BUFGCTRL   |    1 |     0 |          0 |        32 |  3.13 |
+| BUFIO      |    0 |     0 |          0 |        40 |  0.00 |
+| MMCME2_ADV |    0 |     0 |          0 |        10 |  0.00 |
+| PLLE2_ADV  |    0 |     0 |          0 |        10 |  0.00 |
+| BUFMRCE    |    0 |     0 |          0 |        20 |  0.00 |
+| BUFHCE     |    0 |     0 |          0 |       120 |  0.00 |
+| BUFR       |    0 |     0 |          0 |        40 |  0.00 |
++------------+------+-------+------------+-----------+-------+
+
+
+6. Specific Feature
+-------------------
+
++-------------+------+-------+------------+-----------+-------+
+|  Site Type  | Used | Fixed | Prohibited | Available | Util% |
++-------------+------+-------+------------+-----------+-------+
+| BSCANE2     |    0 |     0 |          0 |         4 |  0.00 |
+| CAPTUREE2   |    0 |     0 |          0 |         1 |  0.00 |
+| DNA_PORT    |    0 |     0 |          0 |         1 |  0.00 |
+| EFUSE_USR   |    0 |     0 |          0 |         1 |  0.00 |
+| FRAME_ECCE2 |    0 |     0 |          0 |         1 |  0.00 |
+| ICAPE2      |    0 |     0 |          0 |         2 |  0.00 |
+| PCIE_2_1    |    0 |     0 |          0 |         1 |  0.00 |
+| STARTUPE2   |    0 |     0 |          0 |         1 |  0.00 |
+| XADC        |    0 |     0 |          0 |         1 |  0.00 |
++-------------+------+-------+------------+-----------+-------+
+
+
+7. Primitives
+-------------
+
++----------+------+---------------------+
+| Ref Name | Used | Functional Category |
++----------+------+---------------------+
+| OBUF     |   51 |                  IO |
+| FDCE     |   37 |        Flop & Latch |
+| LUT5     |   34 |                 LUT |
+| FDRE     |   17 |        Flop & Latch |
+| IBUF     |   12 |                  IO |
+| LUT4     |    8 |                 LUT |
+| LUT6     |    4 |                 LUT |
+| LUT2     |    2 |                 LUT |
+| LDCE     |    1 |        Flop & Latch |
+| BUFG     |    1 |               Clock |
++----------+------+---------------------+
+
+
+8. Black Boxes
+--------------
+
++----------+------+
+| Ref Name | Used |
++----------+------+
+
+
+9. Instantiated Netlists
+------------------------
+
++----------+------+
+| Ref Name | Used |
++----------+------+
+
+
+reset_run synth_1
+INFO: [Project 1-1161] Replacing file C:/Users/DELL/Desktop/10680462_10670892/Progetto_reti/10680462_10670892.srcs/utils_1/imports/synth_1/project_reti_logiche.dcp with file C:/Users/DELL/Desktop/10680462_10670892/Progetto_reti/10680462_10670892.runs/synth_1/project_reti_logiche.dcp
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory C:/Users/DELL/Desktop/10680462_10670892/Progetto_reti/10680462_10670892.runs/synth_1
+
+launch_runs synth_1 -jobs 4
+[Tue Mar  7 17:39:05 2023] Launched synth_1...
+Run output will be captured here: C:/Users/DELL/Desktop/10680462_10670892/Progetto_reti/10680462_10670892.runs/synth_1/runme.log
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+exit
+INFO: [Common 17-206] Exiting Vivado at Tue Mar  7 22:53:25 2023...

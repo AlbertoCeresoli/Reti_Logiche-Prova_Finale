@@ -1,7 +1,7 @@
 # compile vhdl design source files
 vhdl xil_defaultlib  \
 "../../../../10680462_10670892.srcs/sources_1/new/project_reti_logiche.vhd" \
-"../../../../../../UNI/Reti Logiche/tb_1.vhd" \
+"../../../../../../UNI/Reti Logiche/tb_5.vhd" \
 
 # Do not sort compile order
 nosort

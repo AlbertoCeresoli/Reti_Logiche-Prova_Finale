@@ -39,7 +39,7 @@ entity datapath is
         rw_load : in std_logic;
         rz_load : in std_logic;
         z_sel : out std_logic_vector(1 downto 0);
-        o_done : out std_logic;
+      --  o_done : out std_logic;
         i_done : in std_logic;
         i_mem_data : in std_logic_vector(7 downto 0);
         o_mem_addr : out std_logic_vector(15 downto 0);
@@ -64,7 +64,7 @@ component datapath is
         rw_load : in std_logic;
         rz_load : in std_logic;
         z_sel : out std_logic_vector(1 downto 0);
-        o_done : out std_logic;
+      --  o_done : out std_logic;
         i_done : in std_logic;
         i_mem_data : in std_logic_vector(7 downto 0);
         o_mem_addr : out std_logic_vector(15 downto 0);
@@ -91,27 +91,26 @@ signal cur_state, next_state : S;
 
 begin
     DATAPATH0: datapath port map(
-            i_clk,
-            i_rst,
-            i_w,
-            r0_load,
-            r1_load,
-            r2_load,
-            r3_load,
-            rw_load,
-            rz_load,
-            z_sel,
-            o_done,
-            i_done,
-            i_mem_data,
-            o_mem_addr,
-            o_z0,
-            o_z1,
-            o_z2,
-            o_z3,
-            i_start
+            
+            i_clk => i_clk,     
+            i_rst => i_rst,     
+            i_w => i_w,       
+            r0_load => r0_load,   
+            r1_load => r1_load,   
+            r2_load => r2_load,   
+            r3_load => r3_load,   
+            rw_load => rw_load,   
+            rz_load => rz_load,   
+            z_sel => z_sel,     
+            i_done => i_done,    
+            i_mem_data => i_mem_data,
+            o_mem_addr => o_mem_addr,
+            o_z0 => o_z0,      
+            o_z1 => o_z1,      
+            o_z2 => o_z2,      
+            o_z3 => o_z3,      
+          i_start => i_start   
         );
- 
  --Reset process for the FSM: when reset goes on INITIATE
     RESET : process(i_clk, i_rst)
     begin
@@ -179,13 +178,10 @@ begin
         r1_load <= '0';
         r2_load <= '0';
         r3_load <= '0';
-        --rw_load <= '0';
         rz_load <= '1';
-        --z_sel <= "XX";
-        --o_done <= '0';
+        o_done <= '0';
         i_done <= '0';
-       -- o_mem_addr <= "0000000000000000";
-        
+        rw_load <= '0';        
         case cur_state is
             when INITIATE => 
                 
@@ -196,6 +192,7 @@ begin
                 rz_load <= '0'; 
             when RECEIVING_W =>
                 rz_load <= '0'; 
+                rw_load <= '1';
             when WAIT_MEM =>
                 o_mem_en <= '1';
                 rw_load <= '0';
@@ -220,7 +217,7 @@ begin
                 r3_load <= '0';
                 rw_load <= '0';
             when FINISH =>
-                o_done <= '0';
+               -- o_done <= '0';
          end case;
 
     end process;
@@ -236,37 +233,47 @@ signal reg_z0 : std_logic_vector(7 downto 0);
 signal reg_z1 : std_logic_vector(7 downto 0);
 signal reg_z2 : std_logic_vector(7 downto 0);
 signal reg_z3 : std_logic_vector(7 downto 0);
-signal start : std_logic;
+--signal start : std_logic;
 begin
+
     CHOSING_Z : process(i_clk, i_rst)
-            begin                
-            z_sel <= reg_z;
+            begin    
             
+            if rising_edge(i_clk) then
+                o_mem_addr <= reg_w;
                 if(i_rst = '1') then
                     reg_z <= "X0";
-                elsif rising_edge(i_clk) then
-                    if(rz_load = '1') then
-                        reg_z <= reg_z(0) & i_w;
-                    end if;
-                        
-                 end if;
+                elsif(rz_load = '1') then
+                    reg_z <= reg_z(0) & i_w;
+                elsif(rz_load = '0') then
+                    z_sel <= reg_z;
+                   
+                end if;
+                 
+            end if;
+
             end process; 
-                        
-    CREATING_ADDR : process(i_clk, i_rst, i_start)    -- 
-            begin
-          o_mem_addr <= reg_w;
-                if(i_rst = '1') then
+
+
+        GESTIONEregw : process (i_clk, i_rst)
+              begin
+              
+              if rising_edge(i_clk) then
+                if i_start = '1' and rw_load = '1' then
+                    reg_w <= reg_w(14 downto 0) & i_w;
+                elsif i_start = '1' and rw_load = '0' then
                     reg_w <= "0000000000000000";
-                elsif rising_edge(i_start) then
+                elsif (i_rst = '1') then
                     reg_w <= "0000000000000000";
-                elsif rising_edge(i_clk) and i_start = '1' then
-                    if(rw_load = '1') then
-                        reg_w <= reg_w(14 downto 0) & i_w;
-                    end if;
-                 end if;
-            end process; 
-            
-     
+               
+                end if;
+                
+               end if;
+              
+               
+              end process; 
+    
+    
     WRITE_REG0 : process(i_clk, i_rst)
             begin
                 if(i_rst = '1') then
@@ -310,6 +317,7 @@ begin
                     end if;
                  end if;
             end process;    
+                 
 
     with i_done select
         o_z0 <= reg_z0 when '1',

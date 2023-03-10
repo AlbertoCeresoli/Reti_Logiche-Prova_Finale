@@ -2,10 +2,10 @@
 # Vivado v2022.2 (64-bit)
 # SW Build 3671981 on Fri Oct 14 05:00:03 MDT 2022
 # IP Build 3669848 on Fri Oct 14 08:30:02 MDT 2022
-# Start of session at: Tue Mar  7 15:06:34 2023
-# Process ID: 11532
+# Start of session at: Fri Mar 10 09:32:37 2023
+# Process ID: 5528
 # Current directory: C:/Users/DELL/Desktop/10680462_10670892/Progetto_reti
-# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent10280 C:\Users\DELL\Desktop\10680462_10670892\Progetto_reti\10680462_10670892.xpr
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent1948 C:\Users\DELL\Desktop\10680462_10670892\Progetto_reti\10680462_10670892.xpr
 # Log file: C:/Users/DELL/Desktop/10680462_10670892/Progetto_reti/vivado.log
 # Journal file: C:/Users/DELL/Desktop/10680462_10670892/Progetto_reti\vivado.jou
 # Running On: DESKTOP-UR6F32S, OS: Windows, CPU Frequency: 2712 MHz, CPU Physical cores: 4, Host memory: 8242 MB
@@ -17,8 +17,80 @@ launch_simulation
 open_wave_config C:/Users/DELL/Desktop/10680462_10670892/Progetto_reti/behav_with_regs.wcfg
 source project_tb.tcl
 run 50000 ns
-export_ip_user_files -of_objects  [get_files {{C:/Users/DELL/Desktop/UNI/Reti Logiche/tb_1.vhd}}] -no_script -reset -force -quiet
-remove_files  -fileset sim_1 {{C:/Users/DELL/Desktop/UNI/Reti Logiche/tb_1.vhd}}
 close_sim
-export_ip_user_files -of_objects  [get_files C:/Users/DELL/Downloads/tb_example23_agg.vhd] -no_script -reset -force -quiet
-remove_files  -fileset sim_1 C:/Users/DELL/Downloads/tb_example23_agg.vhd
+launch_simulation
+open_wave_config C:/Users/DELL/Desktop/10680462_10670892/Progetto_reti/behav_with_regs.wcfg
+source project_tb.tcl
+close_sim
+launch_simulation
+open_wave_config C:/Users/DELL/Desktop/10680462_10670892/Progetto_reti/behav_with_regs.wcfg
+source project_tb.tcl
+run 50000 ns
+run 50000 ns
+reset_run synth_1
+launch_runs synth_1 -jobs 4
+wait_on_run synth_1
+reset_run synth_1
+launch_runs synth_1 -jobs 4
+wait_on_run synth_1
+reset_run synth_1
+launch_runs synth_1 -jobs 4
+wait_on_run synth_1
+close_sim
+launch_simulation
+open_wave_config C:/Users/DELL/Desktop/10680462_10670892/Progetto_reti/behav_with_regs.wcfg
+source project_tb.tcl
+run 50000 ns
+close_sim
+launch_simulation
+open_wave_config C:/Users/DELL/Desktop/10680462_10670892/Progetto_reti/behav_with_regs.wcfg
+source project_tb.tcl
+close_sim
+launch_simulation
+open_wave_config C:/Users/DELL/Desktop/10680462_10670892/Progetto_reti/behav_with_regs.wcfg
+source project_tb.tcl
+run 50000 ns
+run 50000 ns
+close_sim
+launch_simulation
+open_wave_config C:/Users/DELL/Desktop/10680462_10670892/Progetto_reti/behav_with_regs.wcfg
+source project_tb.tcl
+run 50000 ns
+run 50000 ns
+reset_run synth_1
+launch_runs synth_1 -jobs 4
+wait_on_run synth_1
+launch_simulation -mode post-synthesis -type functional
+open_wave_config C:/Users/DELL/Desktop/10680462_10670892/Progetto_reti/behav_with_regs.wcfg
+source project_tb.tcl
+run 50000 ns
+run 50000 ns
+current_sim simulation_7
+close_sim
+launch_simulation
+close_sim
+launch_simulation
+open_wave_config C:/Users/DELL/Desktop/10680462_10670892/Progetto_reti/behav_with_regs.wcfg
+source project_tb.tcl
+run 50000 ns
+run 50000 ns
+reset_run synth_1
+launch_runs synth_1 -jobs 4
+wait_on_run synth_1
+run 50000 ns
+close_design
+launch_simulation -mode post-synthesis -type functional
+open_wave_config C:/Users/DELL/Desktop/10680462_10670892/Progetto_reti/behav_with_regs.wcfg
+source project_tb.tcl
+run 50000 ns
+run 50000 ns
+reset_run synth_1
+launch_runs synth_1 -jobs 4
+wait_on_run synth_1
+close_sim
+close_design
+launch_simulation -mode post-synthesis -type functional
+open_wave_config C:/Users/DELL/Desktop/10680462_10670892/Progetto_reti/behav_with_regs.wcfg
+source project_tb.tcl
+run 50000 ns
+run 50000 ns
