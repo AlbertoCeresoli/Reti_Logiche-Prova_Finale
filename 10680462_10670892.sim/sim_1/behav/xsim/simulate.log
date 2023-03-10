@@ -1,4 +1,4 @@
 Time resolution is 1 ps
-Failure: Simulation Ended! TEST PASSATO (EXAMPLE)
-Time: 62300 ns  Iteration: 0  Process: /project_tb/testRoutine  File: C:/Users/DELL/Desktop/UNI/Reti Logiche/tb_5.vhd
-$finish called at time : 62300 ns : File "C:/Users/DELL/Desktop/UNI/Reti Logiche/tb_5.vhd" Line 542
+Failure: Simulation Ended! TEST PASSED 
+Time: 38050 ns  Iteration: 0  Process: /test_bench_1/RUNTEST  File: C:/Users/DELL/Desktop/10680462_10670892/Progetto_reti/10680462_10670892.srcs/sim_1/new/test_bench_ch_out.vhd
+$finish called at time : 38050 ns : File "C:/Users/DELL/Desktop/10680462_10670892/Progetto_reti/10680462_10670892.srcs/sim_1/new/test_bench_ch_out.vhd" Line 238

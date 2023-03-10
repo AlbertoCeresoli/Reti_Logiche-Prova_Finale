@@ -3,87 +3,67 @@
    <wave_state>
    </wave_state>
    <db_ref_list>
-      <db_ref path="project_tb_behav.wdb" id="1">
+      <db_ref path="test_bench_1_behav.wdb" id="1">
          <top_modules>
-            <top_module name="project_tb" />
+            <top_module name="test_bench_1" />
          </top_modules>
       </db_ref>
    </db_ref_list>
    <zoom_setting>
       <ZoomStartTime time="0.000 ns"></ZoomStartTime>
-      <ZoomEndTime time="1,070.001 ns"></ZoomEndTime>
+      <ZoomEndTime time="2,429.795 ns"></ZoomEndTime>
       <Cursor1Time time="0.000 ns"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
-      <NameColumnWidth column_width="212"></NameColumnWidth>
-      <ValueColumnWidth column_width="81"></ValueColumnWidth>
+      <NameColumnWidth column_width="211"></NameColumnWidth>
+      <ValueColumnWidth column_width="72"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="17" />
-   <wvobject fp_name="/project_tb/tb_done" type="logic">
-      <obj_property name="ElementShortName">tb_done</obj_property>
-      <obj_property name="ObjectShortName">tb_done</obj_property>
-   </wvobject>
-   <wvobject fp_name="/project_tb/mem_address" type="array">
-      <obj_property name="ElementShortName">mem_address[15:0]</obj_property>
-      <obj_property name="ObjectShortName">mem_address[15:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/project_tb/tb_rst" type="logic">
+   <WVObjectSize size="12" />
+   <wvobject fp_name="/test_bench_1/tb_rst" type="logic">
       <obj_property name="ElementShortName">tb_rst</obj_property>
       <obj_property name="ObjectShortName">tb_rst</obj_property>
    </wvobject>
-   <wvobject fp_name="/project_tb/tb_start" type="logic">
+   <wvobject fp_name="/test_bench_1/tb_start" type="logic">
       <obj_property name="ElementShortName">tb_start</obj_property>
       <obj_property name="ObjectShortName">tb_start</obj_property>
    </wvobject>
-   <wvobject fp_name="/project_tb/tb_clk" type="logic">
-      <obj_property name="ElementShortName">tb_clk</obj_property>
-      <obj_property name="ObjectShortName">tb_clk</obj_property>
-   </wvobject>
-   <wvobject fp_name="/project_tb/mem_i_data" type="array">
-      <obj_property name="ElementShortName">mem_i_data[7:0]</obj_property>
-      <obj_property name="ObjectShortName">mem_i_data[7:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/project_tb/enable_wire" type="logic">
-      <obj_property name="ElementShortName">enable_wire</obj_property>
-      <obj_property name="ObjectShortName">enable_wire</obj_property>
-   </wvobject>
-   <wvobject fp_name="/project_tb/mem_we" type="logic">
-      <obj_property name="ElementShortName">mem_we</obj_property>
-      <obj_property name="ObjectShortName">mem_we</obj_property>
-   </wvobject>
-   <wvobject fp_name="/project_tb/tb_z0" type="array">
-      <obj_property name="ElementShortName">tb_z0[7:0]</obj_property>
-      <obj_property name="ObjectShortName">tb_z0[7:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/project_tb/tb_z1" type="array">
-      <obj_property name="ElementShortName">tb_z1[7:0]</obj_property>
-      <obj_property name="ObjectShortName">tb_z1[7:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/project_tb/tb_z2" type="array">
-      <obj_property name="ElementShortName">tb_z2[7:0]</obj_property>
-      <obj_property name="ObjectShortName">tb_z2[7:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/project_tb/tb_z3" type="array">
-      <obj_property name="ElementShortName">tb_z3[7:0]</obj_property>
-      <obj_property name="ObjectShortName">tb_z3[7:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/project_tb/tb_w" type="logic">
+   <wvobject fp_name="/test_bench_1/tb_w" type="logic">
       <obj_property name="ElementShortName">tb_w</obj_property>
       <obj_property name="ObjectShortName">tb_w</obj_property>
    </wvobject>
-   <wvobject fp_name="/project_tb/UUT/MYDATAPATH/rw_load" type="logic">
-      <obj_property name="ElementShortName">rw_load</obj_property>
-      <obj_property name="ObjectShortName">rw_load</obj_property>
+   <wvobject fp_name="/test_bench_1/tb_clk" type="logic">
+      <obj_property name="ElementShortName">tb_clk</obj_property>
+      <obj_property name="ObjectShortName">tb_clk</obj_property>
    </wvobject>
-   <wvobject fp_name="/project_tb/UUT/MYDATAPATH/reg_w" type="array">
+   <wvobject fp_name="/test_bench_1/tb_done" type="logic">
+      <obj_property name="ElementShortName">tb_done</obj_property>
+      <obj_property name="ObjectShortName">tb_done</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_bench_1/PROJECT/o_mem_addr" type="array">
+      <obj_property name="ElementShortName">o_mem_addr[15:0]</obj_property>
+      <obj_property name="ObjectShortName">o_mem_addr[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_bench_1/tb_z0" type="array">
+      <obj_property name="ElementShortName">tb_z0[7:0]</obj_property>
+      <obj_property name="ObjectShortName">tb_z0[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_bench_1/tb_z1" type="array">
+      <obj_property name="ElementShortName">tb_z1[7:0]</obj_property>
+      <obj_property name="ObjectShortName">tb_z1[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_bench_1/tb_z2" type="array">
+      <obj_property name="ElementShortName">tb_z2[7:0]</obj_property>
+      <obj_property name="ObjectShortName">tb_z2[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_bench_1/tb_z3" type="array">
+      <obj_property name="ElementShortName">tb_z3[7:0]</obj_property>
+      <obj_property name="ObjectShortName">tb_z3[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_bench_1/PROJECT/MYDATAPATH/reg_w" type="array">
       <obj_property name="ElementShortName">reg_w[15:0]</obj_property>
       <obj_property name="ObjectShortName">reg_w[15:0]</obj_property>
    </wvobject>
-   <wvobject fp_name="/project_tb/UUT/MYDATAPATH/rz_load" type="logic">
-      <obj_property name="ElementShortName">rz_load</obj_property>
-      <obj_property name="ObjectShortName">rz_load</obj_property>
-   </wvobject>
-   <wvobject fp_name="/project_tb/UUT/MYDATAPATH/reg_z" type="array">
+   <wvobject fp_name="/test_bench_1/PROJECT/MYDATAPATH/reg_z" type="array">
       <obj_property name="ElementShortName">reg_z[1:0]</obj_property>
       <obj_property name="ObjectShortName">reg_z[1:0]</obj_property>
    </wvobject>

@@ -64,7 +64,6 @@ component datapath is
         rw_load : in std_logic;
         rz_load : in std_logic;
         z_sel : out std_logic_vector(1 downto 0);
-      --  o_done : out std_logic;
         i_done : in std_logic;
         i_mem_data : in std_logic_vector(7 downto 0);
         o_mem_addr : out std_logic_vector(15 downto 0);
