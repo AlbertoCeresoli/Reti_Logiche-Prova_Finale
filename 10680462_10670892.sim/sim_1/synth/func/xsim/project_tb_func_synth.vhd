@@ -1,7 +1,7 @@
 -- Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2022.2 (win64) Build 3671981 Fri Oct 14 05:00:03 MDT 2022
--- Date        : Fri Mar 10 10:32:09 2023
+-- Date        : Fri Mar 10 10:47:50 2023
 -- Host        : DESKTOP-UR6F32S running 64-bit major release  (build 9200)
 -- Command     : write_vhdl -mode funcsim -nolib -force -file
 --               C:/Users/DELL/Desktop/10680462_10670892/Progetto_reti/10680462_10670892.sim/sim_1/synth/func/xsim/project_tb_func_synth.vhd
@@ -20,36 +20,38 @@ entity datapath is
     o_z2_OBUF : out STD_LOGIC_VECTOR ( 7 downto 0 );
     o_z1_OBUF : out STD_LOGIC_VECTOR ( 7 downto 0 );
     o_z0_OBUF : out STD_LOGIC_VECTOR ( 7 downto 0 );
-    \o_mem_addr_reg[15]_0\ : out STD_LOGIC_VECTOR ( 15 downto 0 );
+    o_mem_addr_OBUF : out STD_LOGIC_VECTOR ( 15 downto 0 );
     \FSM_sequential_cur_state_reg[0]\ : out STD_LOGIC_VECTOR ( 3 downto 0 );
     i_rst_IBUF : in STD_LOGIC;
     i_start_IBUF : in STD_LOGIC;
     Q : in STD_LOGIC_VECTOR ( 3 downto 0 );
-    D : in STD_LOGIC_VECTOR ( 0 to 0 );
     i_clk_IBUF_BUFG : in STD_LOGIC;
+    D : in STD_LOGIC_VECTOR ( 0 to 0 );
     \reg_z3_reg[7]_0\ : in STD_LOGIC_VECTOR ( 7 downto 0 )
   );
 end datapath;
 
 architecture STRUCTURE of datapath is
+  signal \^o_mem_addr_obuf\ : STD_LOGIC_VECTOR ( 15 downto 0 );
+  signal p_1_in : STD_LOGIC_VECTOR ( 1 to 1 );
   signal r0_load : STD_LOGIC;
   signal r1_load : STD_LOGIC;
   signal r2_load : STD_LOGIC;
   signal r3_load : STD_LOGIC;
   signal \reg_w[15]_i_1_n_0\ : STD_LOGIC;
-  signal \reg_w__0\ : STD_LOGIC_VECTOR ( 15 downto 0 );
-  signal reg_w_n_0 : STD_LOGIC;
-  signal reg_z : STD_LOGIC_VECTOR ( 1 downto 0 );
+  signal \reg_w_inferred__0/i__n_0\ : STD_LOGIC;
   signal reg_z0 : STD_LOGIC_VECTOR ( 7 downto 0 );
   signal reg_z1 : STD_LOGIC_VECTOR ( 7 downto 0 );
   signal reg_z2 : STD_LOGIC_VECTOR ( 7 downto 0 );
   signal reg_z3 : STD_LOGIC_VECTOR ( 7 downto 0 );
   signal \reg_z[1]_i_1_n_0\ : STD_LOGIC;
+  signal \reg_z_reg_n_0_[1]\ : STD_LOGIC;
   signal rz_load : STD_LOGIC;
   signal z_sel : STD_LOGIC_VECTOR ( 1 downto 0 );
   signal \z_sel[0]_i_1_n_0\ : STD_LOGIC;
   signal \z_sel[1]_i_1_n_0\ : STD_LOGIC;
 begin
+  o_mem_addr_OBUF(15 downto 0) <= \^o_mem_addr_obuf\(15 downto 0);
 \FSM_sequential_cur_state[0]_i_1\: unisim.vcomponents.LUT5
     generic map(
       INIT => X"0011EF33"
@@ -100,182 +102,6 @@ begin
       I4 => Q(1),
       I5 => Q(2),
       O => \FSM_sequential_cur_state_reg[0]\(3)
-    );
-\o_mem_addr_reg[0]\: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '0'
-    )
-        port map (
-      C => i_clk_IBUF_BUFG,
-      CE => '1',
-      D => \reg_w__0\(0),
-      Q => \o_mem_addr_reg[15]_0\(0),
-      R => '0'
-    );
-\o_mem_addr_reg[10]\: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '0'
-    )
-        port map (
-      C => i_clk_IBUF_BUFG,
-      CE => '1',
-      D => \reg_w__0\(10),
-      Q => \o_mem_addr_reg[15]_0\(10),
-      R => '0'
-    );
-\o_mem_addr_reg[11]\: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '0'
-    )
-        port map (
-      C => i_clk_IBUF_BUFG,
-      CE => '1',
-      D => \reg_w__0\(11),
-      Q => \o_mem_addr_reg[15]_0\(11),
-      R => '0'
-    );
-\o_mem_addr_reg[12]\: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '0'
-    )
-        port map (
-      C => i_clk_IBUF_BUFG,
-      CE => '1',
-      D => \reg_w__0\(12),
-      Q => \o_mem_addr_reg[15]_0\(12),
-      R => '0'
-    );
-\o_mem_addr_reg[13]\: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '0'
-    )
-        port map (
-      C => i_clk_IBUF_BUFG,
-      CE => '1',
-      D => \reg_w__0\(13),
-      Q => \o_mem_addr_reg[15]_0\(13),
-      R => '0'
-    );
-\o_mem_addr_reg[14]\: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '0'
-    )
-        port map (
-      C => i_clk_IBUF_BUFG,
-      CE => '1',
-      D => \reg_w__0\(14),
-      Q => \o_mem_addr_reg[15]_0\(14),
-      R => '0'
-    );
-\o_mem_addr_reg[15]\: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '0'
-    )
-        port map (
-      C => i_clk_IBUF_BUFG,
-      CE => '1',
-      D => \reg_w__0\(15),
-      Q => \o_mem_addr_reg[15]_0\(15),
-      R => '0'
-    );
-\o_mem_addr_reg[1]\: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '0'
-    )
-        port map (
-      C => i_clk_IBUF_BUFG,
-      CE => '1',
-      D => \reg_w__0\(1),
-      Q => \o_mem_addr_reg[15]_0\(1),
-      R => '0'
-    );
-\o_mem_addr_reg[2]\: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '0'
-    )
-        port map (
-      C => i_clk_IBUF_BUFG,
-      CE => '1',
-      D => \reg_w__0\(2),
-      Q => \o_mem_addr_reg[15]_0\(2),
-      R => '0'
-    );
-\o_mem_addr_reg[3]\: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '0'
-    )
-        port map (
-      C => i_clk_IBUF_BUFG,
-      CE => '1',
-      D => \reg_w__0\(3),
-      Q => \o_mem_addr_reg[15]_0\(3),
-      R => '0'
-    );
-\o_mem_addr_reg[4]\: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '0'
-    )
-        port map (
-      C => i_clk_IBUF_BUFG,
-      CE => '1',
-      D => \reg_w__0\(4),
-      Q => \o_mem_addr_reg[15]_0\(4),
-      R => '0'
-    );
-\o_mem_addr_reg[5]\: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '0'
-    )
-        port map (
-      C => i_clk_IBUF_BUFG,
-      CE => '1',
-      D => \reg_w__0\(5),
-      Q => \o_mem_addr_reg[15]_0\(5),
-      R => '0'
-    );
-\o_mem_addr_reg[6]\: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '0'
-    )
-        port map (
-      C => i_clk_IBUF_BUFG,
-      CE => '1',
-      D => \reg_w__0\(6),
-      Q => \o_mem_addr_reg[15]_0\(6),
-      R => '0'
-    );
-\o_mem_addr_reg[7]\: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '0'
-    )
-        port map (
-      C => i_clk_IBUF_BUFG,
-      CE => '1',
-      D => \reg_w__0\(7),
-      Q => \o_mem_addr_reg[15]_0\(7),
-      R => '0'
-    );
-\o_mem_addr_reg[8]\: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '0'
-    )
-        port map (
-      C => i_clk_IBUF_BUFG,
-      CE => '1',
-      D => \reg_w__0\(8),
-      Q => \o_mem_addr_reg[15]_0\(8),
-      R => '0'
-    );
-\o_mem_addr_reg[9]\: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '0'
-    )
-        port map (
-      C => i_clk_IBUF_BUFG,
-      CE => '1',
-      D => \reg_w__0\(9),
-      Q => \o_mem_addr_reg[15]_0\(9),
-      R => '0'
     );
 \o_z0_OBUF[0]_inst_i_1\: unisim.vcomponents.LUT5
     generic map(
@@ -661,15 +487,6 @@ begin
       I4 => reg_z3(7),
       O => o_z3_OBUF(7)
     );
-reg_w: unisim.vcomponents.LUT2
-    generic map(
-      INIT => X"E"
-    )
-        port map (
-      I0 => i_rst_IBUF,
-      I1 => i_start_IBUF,
-      O => reg_w_n_0
-    );
 \reg_w[15]_i_1\: unisim.vcomponents.LUT5
     generic map(
       INIT => X"FFF3AAAA"
@@ -682,15 +499,24 @@ reg_w: unisim.vcomponents.LUT2
       I4 => i_start_IBUF,
       O => \reg_w[15]_i_1_n_0\
     );
+\reg_w_inferred__0/i_\: unisim.vcomponents.LUT2
+    generic map(
+      INIT => X"E"
+    )
+        port map (
+      I0 => i_rst_IBUF,
+      I1 => i_start_IBUF,
+      O => \reg_w_inferred__0/i__n_0\
+    );
 \reg_w_reg[0]\: unisim.vcomponents.FDRE
     generic map(
       INIT => '0'
     )
         port map (
       C => i_clk_IBUF_BUFG,
-      CE => reg_w_n_0,
+      CE => \reg_w_inferred__0/i__n_0\,
       D => D(0),
-      Q => \reg_w__0\(0),
+      Q => \^o_mem_addr_obuf\(0),
       R => \reg_w[15]_i_1_n_0\
     );
 \reg_w_reg[10]\: unisim.vcomponents.FDRE
@@ -699,9 +525,9 @@ reg_w: unisim.vcomponents.LUT2
     )
         port map (
       C => i_clk_IBUF_BUFG,
-      CE => reg_w_n_0,
-      D => \reg_w__0\(9),
-      Q => \reg_w__0\(10),
+      CE => \reg_w_inferred__0/i__n_0\,
+      D => \^o_mem_addr_obuf\(9),
+      Q => \^o_mem_addr_obuf\(10),
       R => \reg_w[15]_i_1_n_0\
     );
 \reg_w_reg[11]\: unisim.vcomponents.FDRE
@@ -710,9 +536,9 @@ reg_w: unisim.vcomponents.LUT2
     )
         port map (
       C => i_clk_IBUF_BUFG,
-      CE => reg_w_n_0,
-      D => \reg_w__0\(10),
-      Q => \reg_w__0\(11),
+      CE => \reg_w_inferred__0/i__n_0\,
+      D => \^o_mem_addr_obuf\(10),
+      Q => \^o_mem_addr_obuf\(11),
       R => \reg_w[15]_i_1_n_0\
     );
 \reg_w_reg[12]\: unisim.vcomponents.FDRE
@@ -721,9 +547,9 @@ reg_w: unisim.vcomponents.LUT2
     )
         port map (
       C => i_clk_IBUF_BUFG,
-      CE => reg_w_n_0,
-      D => \reg_w__0\(11),
-      Q => \reg_w__0\(12),
+      CE => \reg_w_inferred__0/i__n_0\,
+      D => \^o_mem_addr_obuf\(11),
+      Q => \^o_mem_addr_obuf\(12),
       R => \reg_w[15]_i_1_n_0\
     );
 \reg_w_reg[13]\: unisim.vcomponents.FDRE
@@ -732,9 +558,9 @@ reg_w: unisim.vcomponents.LUT2
     )
         port map (
       C => i_clk_IBUF_BUFG,
-      CE => reg_w_n_0,
-      D => \reg_w__0\(12),
-      Q => \reg_w__0\(13),
+      CE => \reg_w_inferred__0/i__n_0\,
+      D => \^o_mem_addr_obuf\(12),
+      Q => \^o_mem_addr_obuf\(13),
       R => \reg_w[15]_i_1_n_0\
     );
 \reg_w_reg[14]\: unisim.vcomponents.FDRE
@@ -743,9 +569,9 @@ reg_w: unisim.vcomponents.LUT2
     )
         port map (
       C => i_clk_IBUF_BUFG,
-      CE => reg_w_n_0,
-      D => \reg_w__0\(13),
-      Q => \reg_w__0\(14),
+      CE => \reg_w_inferred__0/i__n_0\,
+      D => \^o_mem_addr_obuf\(13),
+      Q => \^o_mem_addr_obuf\(14),
       R => \reg_w[15]_i_1_n_0\
     );
 \reg_w_reg[15]\: unisim.vcomponents.FDRE
@@ -754,9 +580,9 @@ reg_w: unisim.vcomponents.LUT2
     )
         port map (
       C => i_clk_IBUF_BUFG,
-      CE => reg_w_n_0,
-      D => \reg_w__0\(14),
-      Q => \reg_w__0\(15),
+      CE => \reg_w_inferred__0/i__n_0\,
+      D => \^o_mem_addr_obuf\(14),
+      Q => \^o_mem_addr_obuf\(15),
       R => \reg_w[15]_i_1_n_0\
     );
 \reg_w_reg[1]\: unisim.vcomponents.FDRE
@@ -765,9 +591,9 @@ reg_w: unisim.vcomponents.LUT2
     )
         port map (
       C => i_clk_IBUF_BUFG,
-      CE => reg_w_n_0,
-      D => \reg_w__0\(0),
-      Q => \reg_w__0\(1),
+      CE => \reg_w_inferred__0/i__n_0\,
+      D => \^o_mem_addr_obuf\(0),
+      Q => \^o_mem_addr_obuf\(1),
       R => \reg_w[15]_i_1_n_0\
     );
 \reg_w_reg[2]\: unisim.vcomponents.FDRE
@@ -776,9 +602,9 @@ reg_w: unisim.vcomponents.LUT2
     )
         port map (
       C => i_clk_IBUF_BUFG,
-      CE => reg_w_n_0,
-      D => \reg_w__0\(1),
-      Q => \reg_w__0\(2),
+      CE => \reg_w_inferred__0/i__n_0\,
+      D => \^o_mem_addr_obuf\(1),
+      Q => \^o_mem_addr_obuf\(2),
       R => \reg_w[15]_i_1_n_0\
     );
 \reg_w_reg[3]\: unisim.vcomponents.FDRE
@@ -787,9 +613,9 @@ reg_w: unisim.vcomponents.LUT2
     )
         port map (
       C => i_clk_IBUF_BUFG,
-      CE => reg_w_n_0,
-      D => \reg_w__0\(2),
-      Q => \reg_w__0\(3),
+      CE => \reg_w_inferred__0/i__n_0\,
+      D => \^o_mem_addr_obuf\(2),
+      Q => \^o_mem_addr_obuf\(3),
       R => \reg_w[15]_i_1_n_0\
     );
 \reg_w_reg[4]\: unisim.vcomponents.FDRE
@@ -798,9 +624,9 @@ reg_w: unisim.vcomponents.LUT2
     )
         port map (
       C => i_clk_IBUF_BUFG,
-      CE => reg_w_n_0,
-      D => \reg_w__0\(3),
-      Q => \reg_w__0\(4),
+      CE => \reg_w_inferred__0/i__n_0\,
+      D => \^o_mem_addr_obuf\(3),
+      Q => \^o_mem_addr_obuf\(4),
       R => \reg_w[15]_i_1_n_0\
     );
 \reg_w_reg[5]\: unisim.vcomponents.FDRE
@@ -809,9 +635,9 @@ reg_w: unisim.vcomponents.LUT2
     )
         port map (
       C => i_clk_IBUF_BUFG,
-      CE => reg_w_n_0,
-      D => \reg_w__0\(4),
-      Q => \reg_w__0\(5),
+      CE => \reg_w_inferred__0/i__n_0\,
+      D => \^o_mem_addr_obuf\(4),
+      Q => \^o_mem_addr_obuf\(5),
       R => \reg_w[15]_i_1_n_0\
     );
 \reg_w_reg[6]\: unisim.vcomponents.FDRE
@@ -820,9 +646,9 @@ reg_w: unisim.vcomponents.LUT2
     )
         port map (
       C => i_clk_IBUF_BUFG,
-      CE => reg_w_n_0,
-      D => \reg_w__0\(5),
-      Q => \reg_w__0\(6),
+      CE => \reg_w_inferred__0/i__n_0\,
+      D => \^o_mem_addr_obuf\(5),
+      Q => \^o_mem_addr_obuf\(6),
       R => \reg_w[15]_i_1_n_0\
     );
 \reg_w_reg[7]\: unisim.vcomponents.FDRE
@@ -831,9 +657,9 @@ reg_w: unisim.vcomponents.LUT2
     )
         port map (
       C => i_clk_IBUF_BUFG,
-      CE => reg_w_n_0,
-      D => \reg_w__0\(6),
-      Q => \reg_w__0\(7),
+      CE => \reg_w_inferred__0/i__n_0\,
+      D => \^o_mem_addr_obuf\(6),
+      Q => \^o_mem_addr_obuf\(7),
       R => \reg_w[15]_i_1_n_0\
     );
 \reg_w_reg[8]\: unisim.vcomponents.FDRE
@@ -842,9 +668,9 @@ reg_w: unisim.vcomponents.LUT2
     )
         port map (
       C => i_clk_IBUF_BUFG,
-      CE => reg_w_n_0,
-      D => \reg_w__0\(7),
-      Q => \reg_w__0\(8),
+      CE => \reg_w_inferred__0/i__n_0\,
+      D => \^o_mem_addr_obuf\(7),
+      Q => \^o_mem_addr_obuf\(8),
       R => \reg_w[15]_i_1_n_0\
     );
 \reg_w_reg[9]\: unisim.vcomponents.FDRE
@@ -853,9 +679,9 @@ reg_w: unisim.vcomponents.LUT2
     )
         port map (
       C => i_clk_IBUF_BUFG,
-      CE => reg_w_n_0,
-      D => \reg_w__0\(8),
-      Q => \reg_w__0\(9),
+      CE => \reg_w_inferred__0/i__n_0\,
+      D => \^o_mem_addr_obuf\(8),
+      Q => \^o_mem_addr_obuf\(9),
       R => \reg_w[15]_i_1_n_0\
     );
 \reg_z0[7]_i_1\: unisim.vcomponents.LUT4
@@ -1270,12 +1096,12 @@ reg_w: unisim.vcomponents.LUT2
       INIT => X"FEBAEEBA028A228A"
     )
         port map (
-      I0 => reg_z(0),
+      I0 => p_1_in(1),
       I1 => Q(2),
       I2 => Q(1),
       I3 => Q(3),
       I4 => Q(0),
-      I5 => reg_z(1),
+      I5 => \reg_z_reg_n_0_[1]\,
       O => \reg_z[1]_i_1_n_0\
     );
 \reg_z_reg[0]\: unisim.vcomponents.FDRE
@@ -1286,7 +1112,7 @@ reg_w: unisim.vcomponents.LUT2
       C => i_clk_IBUF_BUFG,
       CE => rz_load,
       D => D(0),
-      Q => reg_z(0),
+      Q => p_1_in(1),
       R => i_rst_IBUF
     );
 \reg_z_reg[1]\: unisim.vcomponents.FDRE
@@ -1297,7 +1123,7 @@ reg_w: unisim.vcomponents.LUT2
       C => i_clk_IBUF_BUFG,
       CE => '1',
       D => \reg_z[1]_i_1_n_0\,
-      Q => reg_z(1),
+      Q => \reg_z_reg_n_0_[1]\,
       R => '0'
     );
 \z_sel[0]_i_1\: unisim.vcomponents.LUT4
@@ -1305,7 +1131,7 @@ reg_w: unisim.vcomponents.LUT2
       INIT => X"FE02"
     )
         port map (
-      I0 => reg_z(0),
+      I0 => p_1_in(1),
       I1 => i_rst_IBUF,
       I2 => rz_load,
       I3 => z_sel(0),
@@ -1316,7 +1142,7 @@ reg_w: unisim.vcomponents.LUT2
       INIT => X"FE02"
     )
         port map (
-      I0 => reg_z(1),
+      I0 => \reg_z_reg_n_0_[1]\,
       I1 => i_rst_IBUF,
       I2 => rz_load,
       I3 => z_sel(1),
@@ -1403,7 +1229,7 @@ DATAPATH0: entity work.datapath
       i_clk_IBUF_BUFG => i_clk_IBUF_BUFG,
       i_rst_IBUF => i_rst_IBUF,
       i_start_IBUF => i_start_IBUF,
-      \o_mem_addr_reg[15]_0\(15 downto 0) => o_mem_addr_OBUF(15 downto 0),
+      o_mem_addr_OBUF(15 downto 0) => o_mem_addr_OBUF(15 downto 0),
       o_z0_OBUF(7 downto 0) => o_z0_OBUF(7 downto 0),
       o_z1_OBUF(7 downto 0) => o_z1_OBUF(7 downto 0),
       o_z2_OBUF(7 downto 0) => o_z2_OBUF(7 downto 0),

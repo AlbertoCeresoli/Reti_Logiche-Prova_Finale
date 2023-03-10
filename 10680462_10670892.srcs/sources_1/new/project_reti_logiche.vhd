@@ -86,11 +86,11 @@ signal  rz_load : std_logic;
 signal  z_sel : std_logic_vector(1 downto 0);
 signal i_done : std_logic;
 --States type declaration
-type S is(INITIATE, RECEIVING_CH1, RECEIVING_CH2, RECEIVING_W, WAIT_MEM, ACTIVATE_Z0, ACTIVATE_Z1, ACTIVATE_Z2, ACTIVATE_Z3, PRINT_OUT, FINISH);
+type S is(INITIATE, RECEIVING_CH1, RECEIVING_CH2, RECEIVING_W, WAIT_MEM, ACTIVATE_Z0, ACTIVATE_Z1, ACTIVATE_Z2, ACTIVATE_Z3, PRINT_OUT); --, FINISH
 signal cur_state, next_state : S;
 
 begin
-    DATAPATH0: datapath port map(
+    MYDATAPATH: datapath port map(
             
             i_clk => i_clk,     
             i_rst => i_rst,     
@@ -109,7 +109,7 @@ begin
             o_z1 => o_z1,      
             o_z2 => o_z2,      
             o_z3 => o_z3,      
-          i_start => i_start   
+            i_start => i_start   
         );
  --Reset process for the FSM: when reset goes on INITIATE
     RESET : process(i_clk, i_rst)
@@ -162,9 +162,9 @@ begin
                 when ACTIVATE_Z3 =>
                     next_state <= PRINT_OUT;    
                 when PRINT_OUT =>
-                    next_state <= FINISH;
-                when FINISH =>
                     next_state <= INITIATE;
+--                when FINISH =>
+--                    next_state <= INITIATE;
             end case;
         end process;
         
@@ -184,9 +184,7 @@ begin
         rw_load <= '0';        
         case cur_state is
             when INITIATE => 
-                
             when RECEIVING_CH1 => 
-                rz_load <= '1';
             when RECEIVING_CH2 =>
                 rw_load <= '1';
                 rz_load <= '0'; 
@@ -195,29 +193,19 @@ begin
                 rw_load <= '1';
             when WAIT_MEM =>
                 o_mem_en <= '1';
-                rw_load <= '0';
             when ACTIVATE_Z0 => 
                 r0_load <= '1';
-                rw_load <= '0';
             when ACTIVATE_Z1 => 
                 r1_load <= '1';
-                rw_load <= '0';
             when ACTIVATE_Z2 => 
                 r2_load <= '1';
-                rw_load <= '0';
             when ACTIVATE_Z3 => 
                 r3_load <= '1';
-                rw_load <= '0';
             when PRINT_OUT =>
                 o_done <= '1';
                 i_done <= '1';
-                r0_load <= '0';
-                r1_load <= '0';
-                r2_load <= '0';
-                r3_load <= '0';
-                rw_load <= '0';
-            when FINISH =>
-               -- o_done <= '0';
+                
+--            when FINISH =>
          end case;
 
     end process;
@@ -227,102 +215,95 @@ end Behavioral;
 
 architecture Behavioral of datapath is
 --Inner registers declaration
+
 signal reg_w : std_logic_vector(15 downto 0);
 signal reg_z : std_logic_vector(1 downto 0);
 signal reg_z0 : std_logic_vector(7 downto 0);
 signal reg_z1 : std_logic_vector(7 downto 0);
 signal reg_z2 : std_logic_vector(7 downto 0);
 signal reg_z3 : std_logic_vector(7 downto 0);
---signal start : std_logic;
+
 begin
 
-    CHOSING_Z : process(i_clk, i_rst)
-            begin    
-            
-            if rising_edge(i_clk) then
-                o_mem_addr <= reg_w;
-                if(i_rst = '1') then
-                    reg_z <= "X0";
-                elsif(rz_load = '1') then
-                    reg_z <= reg_z(0) & i_w;
-                elsif(rz_load = '0') then
-                    z_sel <= reg_z;
-                   
-                end if;
-                 
+    REGZ_MANAGEMENT : process(i_clk)
+        begin 
+        if rising_edge(i_clk) then
+            if(i_rst = '1') then
+                reg_z <= "00";
+            elsif(rz_load = '1') then
+                reg_z <= reg_z(0) & i_w;
+            elsif(rz_load = '0') then
+                z_sel <= reg_z;
             end if;
+        end if;
+        end process; 
 
-            end process; 
-
-
-        GESTIONEregw : process (i_clk, i_rst)
-              begin
-              
-              if rising_edge(i_clk) then
-                if i_start = '1' and rw_load = '1' then
-                    reg_w <= reg_w(14 downto 0) & i_w;
-                elsif i_start = '1' and rw_load = '0' then
-                    reg_w <= "0000000000000000";
-                elsif (i_rst = '1') then
-                    reg_w <= "0000000000000000";
-               
-                end if;
-                
-               end if;
-              
-               
-              end process; 
+    REGW_MANAGEMENT : process (i_clk)
+        begin
+        --o_mem_addr <= reg_w;
+        if rising_edge(i_clk) then
+            if i_start = '1' and rw_load = '1' then
+                reg_w <= reg_w(14 downto 0) & i_w;
+            elsif i_start = '1' and rw_load = '0' then
+                reg_w <= "0000000000000000";
+            elsif (i_rst = '1') then
+                reg_w <= "0000000000000000";
+            end if;
+        end if;           
+        end process; 
     
-    
-    WRITE_REG0 : process(i_clk, i_rst)
-            begin
-                if(i_rst = '1') then
-                    reg_z0 <= "00000000";
-                elsif rising_edge(i_clk) then
-                    if(r0_load = '1') then
-                        reg_z0 <= i_mem_data;
-                    end if;
-                 end if;
-            end process;
-         
-    WRITE_REG1 : process(i_clk, i_rst)
-            begin
-                if(i_rst = '1') then
-                    reg_z1 <= "00000000";
-                elsif rising_edge(i_clk) then
-                    if(r1_load = '1') then
-                        reg_z1 <= i_mem_data;
-                    end if;
-                 end if;
-            end process;
+    WRITE_REG0 : process(i_clk)
+        begin
+        if rising_edge(i_clk) then
+            if(i_rst = '1') then
+                reg_z0 <= "00000000";
+            elsif(r0_load = '1') then
+                reg_z0 <= i_mem_data;
+            end if;
+        end if;
+        end process;
             
-    WRITE_REG2 : process(i_clk, i_rst)
-            begin
-                if(i_rst = '1') then
-                    reg_z2 <= "00000000";
-                elsif rising_edge(i_clk) then
-                    if(r2_load = '1') then
-                        reg_z2 <= i_mem_data;
-                    end if;
-                 end if;
-            end process;          
+    WRITE_REG1 : process(i_clk)
+        begin
+        if rising_edge(i_clk) then
+            if(i_rst = '1') then
+                reg_z1 <= "00000000";
+            elsif(r1_load = '1') then
+                reg_z1 <= i_mem_data;
+            end if;
+        end if;
+        end process;
+            
+     WRITE_REG2 : process(i_clk)
+        begin
+        if rising_edge(i_clk) then
+            if(i_rst = '1') then
+                reg_z2 <= "00000000";
+            elsif(r2_load = '1') then
+                reg_z2 <= i_mem_data;
+            end if;
+        end if;
+        end process;          
     
-    WRITE_REG3 : process(i_clk, i_rst)
-            begin
-                if(i_rst = '1') then
-                    reg_z3 <= "00000000";
-                elsif rising_edge(i_clk) then
-                    if(r3_load = '1') then
-                        reg_z3 <= i_mem_data;
-                    end if;
-                 end if;
-            end process;    
+     WRITE_REG3 : process(i_clk)
+        begin
+        if rising_edge(i_clk) then
+            if(i_rst = '1') then
+                reg_z3 <= "00000000";
+            elsif(r3_load = '1') then
+                reg_z3 <= i_mem_data;
+            end if;
+        end if;
+        end process;    
                  
-
+    with rw_load select
+        o_mem_addr <= reg_w when '0',
+                      "0000000000000000" when others;
+    
     with i_done select
         o_z0 <= reg_z0 when '1',
                 "00000000" when others;    
-
+    
     with i_done select
         o_z1 <= reg_z1 when '1',
                 "00000000" when others; 
