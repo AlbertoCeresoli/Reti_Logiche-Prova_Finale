@@ -2,63 +2,82 @@
 # Vivado v2022.2 (64-bit)
 # SW Build 3671981 on Fri Oct 14 05:00:03 MDT 2022
 # IP Build 3669848 on Fri Oct 14 08:30:02 MDT 2022
-# Start of session at: Fri Mar 10 13:56:28 2023
-# Process ID: 1104
-# Current directory: C:/Users/DELL/Desktop/10680462_10670892/Progetto_reti
-# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent9800 C:\Users\DELL\Desktop\10680462_10670892\Progetto_reti\10680462_10670892.xpr
-# Log file: C:/Users/DELL/Desktop/10680462_10670892/Progetto_reti/vivado.log
-# Journal file: C:/Users/DELL/Desktop/10680462_10670892/Progetto_reti\vivado.jou
-# Running On: DESKTOP-UR6F32S, OS: Windows, CPU Frequency: 2712 MHz, CPU Physical cores: 4, Host memory: 8242 MB
+# Start of session at: Fri Mar 10 16:59:39 2023
+# Process ID: 14132
+# Current directory: C:/Users/franc/OneDrive - Politecnico di Milano/AA 202223/Reti Logiche/Progetto_Reti_Logiche/Project_code_2023/Progetto_reti
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent10484 C:\Users\franc\OneDrive - Politecnico di Milano\AA 202223\Reti Logiche\Progetto_Reti_Logiche\Project_code_2023\Progetto_reti\10680462_10670892.xpr
+# Log file: C:/Users/franc/OneDrive - Politecnico di Milano/AA 202223/Reti Logiche/Progetto_Reti_Logiche/Project_code_2023/Progetto_reti/vivado.log
+# Journal file: C:/Users/franc/OneDrive - Politecnico di Milano/AA 202223/Reti Logiche/Progetto_Reti_Logiche/Project_code_2023/Progetto_reti\vivado.jou
+# Running On: DESKTOP-5831C5J, OS: Windows, CPU Frequency: 2592 MHz, CPU Physical cores: 6, Host memory: 17068 MB
 #-----------------------------------------------------------
 start_gui
-open_project C:/Users/DELL/Desktop/10680462_10670892/Progetto_reti/10680462_10670892.xpr
+open_project {C:/Users/franc/OneDrive - Politecnico di Milano/AA 202223/Reti Logiche/Progetto_Reti_Logiche/Project_code_2023/Progetto_reti/10680462_10670892.xpr}
 update_compile_order -fileset sources_1
-launch_simulation
-open_wave_config C:/Users/DELL/Desktop/10680462_10670892/Progetto_reti/behav_with_regs.wcfg
-source project_tb.tcl
-run 50000 ns
-run 50000 ns
-file mkdir C:/Users/DELL/Desktop/10680462_10670892/Progetto_reti/10680462_10670892.srcs/sim_1/new
 set_property SOURCE_SET sources_1 [get_filesets sim_1]
-close [ open C:/Users/DELL/Desktop/10680462_10670892/Progetto_reti/10680462_10670892.srcs/sim_1/new/test_bench_ch_out.vhd w ]
-add_files -fileset sim_1 C:/Users/DELL/Desktop/10680462_10670892/Progetto_reti/10680462_10670892.srcs/sim_1/new/test_bench_ch_out.vhd
+close [ open {C:/Users/franc/OneDrive - Politecnico di Milano/AA 202223/Reti Logiche/Progetto_Reti_Logiche/Project_code_2023/Progetto_reti/10680462_10670892.srcs/sim_1/new/test_bench_mem_addr.vhd} w ]
+add_files -fileset sim_1 {{C:/Users/franc/OneDrive - Politecnico di Milano/AA 202223/Reti Logiche/Progetto_Reti_Logiche/Project_code_2023/Progetto_reti/10680462_10670892.srcs/sim_1/new/test_bench_mem_addr.vhd}}
 update_compile_order -fileset sim_1
-export_ip_user_files -of_objects  [get_files {{C:/Users/DELL/Desktop/UNI/Reti Logiche/tb_4.vhd}}] -no_script -reset -force -quiet
-remove_files  -fileset sim_1 {{C:/Users/DELL/Desktop/UNI/Reti Logiche/tb_4.vhd}}
-export_ip_user_files -of_objects  [get_files {{C:/Users/DELL/Desktop/UNI/Reti Logiche/tb_3.vhd}}] -no_script -reset -force -quiet
-remove_files  -fileset sim_1 {{C:/Users/DELL/Desktop/UNI/Reti Logiche/tb_3.vhd}}
-export_ip_user_files -of_objects  [get_files {{C:/Users/DELL/Desktop/UNI/Reti Logiche/tb_2.vhd}}] -no_script -reset -force -quiet
-remove_files  -fileset sim_1 {{C:/Users/DELL/Desktop/UNI/Reti Logiche/tb_2.vhd}}
-export_ip_user_files -of_objects  [get_files {{C:/Users/DELL/Desktop/UNI/Reti Logiche/tb_1.vhd}}] -no_script -reset -force -quiet
-remove_files  -fileset sim_1 {{C:/Users/DELL/Desktop/UNI/Reti Logiche/tb_1.vhd}}
-export_ip_user_files -of_objects  [get_files {{C:/Users/DELL/Desktop/UNI/Reti Logiche/tb_5.vhd}}] -no_script -reset -force -quiet
-remove_files  -fileset sim_1 {{C:/Users/DELL/Desktop/UNI/Reti Logiche/tb_5.vhd}}
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top test_bench_mem_addr [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode All [current_project]
 update_compile_order -fileset sim_1
-set_property top test_bench_1 [get_filesets sim_1]
-launch_simulation
+launch_simulation -mode post-synthesis -type functional
+open_wave_config {C:/Users/franc/OneDrive - Politecnico di Milano/AA 202223/Reti Logiche/Progetto_Reti_Logiche/Project_code_2023/Progetto_reti/behav_with_regs.wcfg}
+source test_bench_mem_addr.tcl
+save_wave_config {C:/Users/franc/OneDrive - Politecnico di Milano/AA 202223/Reti Logiche/Progetto_Reti_Logiche/Project_code_2023/Progetto_reti/behav_with_regs.wcfg}
 close_sim
-launch_simulation
-launch_simulation
-open_wave_config C:/Users/DELL/Desktop/10680462_10670892/Progetto_reti/behav_with_regs.wcfg
-source test_bench_1.tcl
-save_wave_config {C:/Users/DELL/Desktop/10680462_10670892/Progetto_reti/behav_with_regs.wcfg}
-save_wave_config {C:/Users/DELL/Desktop/10680462_10670892/Progetto_reti/behav_with_regs.wcfg}
-save_wave_config {C:/Users/DELL/Desktop/10680462_10670892/Progetto_reti/behav_with_regs.wcfg}
+launch_simulation -mode post-synthesis -type functional
+open_wave_config {C:/Users/franc/OneDrive - Politecnico di Milano/AA 202223/Reti Logiche/Progetto_Reti_Logiche/Project_code_2023/Progetto_reti/behav_with_regs.wcfg}
+source test_bench_mem_addr.tcl
+run 5000 us
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top test_bench_ch_out [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode All [current_project]
+update_compile_order -fileset sim_1
+launch_simulation -mode post-synthesis -type functional
 close_sim
-launch_simulation
-open_wave_config C:/Users/DELL/Desktop/10680462_10670892/Progetto_reti/behav_with_regs.wcfg
-source test_bench_1.tcl
-run 50000 ns
-save_wave_config {C:/Users/DELL/Desktop/10680462_10670892/Progetto_reti/behav_with_regs.wcfg}
-save_wave_config {C:/Users/DELL/Desktop/10680462_10670892/Progetto_reti/behav_with_regs.wcfg}
+launch_simulation -mode post-synthesis -type functional
+open_wave_config {C:/Users/franc/OneDrive - Politecnico di Milano/AA 202223/Reti Logiche/Progetto_Reti_Logiche/Project_code_2023/Progetto_reti/behav_with_regs.wcfg}
+source test_bench_ch_out.tcl
+save_wave_config {C:/Users/franc/OneDrive - Politecnico di Milano/AA 202223/Reti Logiche/Progetto_Reti_Logiche/Project_code_2023/Progetto_reti/behav_with_regs.wcfg}
 close_sim
-launch_simulation
-open_wave_config C:/Users/DELL/Desktop/10680462_10670892/Progetto_reti/behav_with_regs.wcfg
-source test_bench_1.tcl
-run 50000 ns
+launch_simulation -mode post-synthesis -type functional
+open_wave_config {C:/Users/franc/OneDrive - Politecnico di Milano/AA 202223/Reti Logiche/Progetto_Reti_Logiche/Project_code_2023/Progetto_reti/behav_with_regs.wcfg}
+source test_bench_ch_out.tcl
+run 5000 us
+add_bp {C:/Users/franc/OneDrive - Politecnico di Milano/AA 202223/Reti Logiche/Progetto_Reti_Logiche/Project_code_2023/Progetto_reti/10680462_10670892.srcs/sim_1/new/test_bench_ch_out.vhd} 175
+remove_bps -file {C:/Users/franc/OneDrive - Politecnico di Milano/AA 202223/Reti Logiche/Progetto_Reti_Logiche/Project_code_2023/Progetto_reti/10680462_10670892.srcs/sim_1/new/test_bench_ch_out.vhd} -line 175
 close_sim
-launch_simulation
-open_wave_config C:/Users/DELL/Desktop/10680462_10670892/Progetto_reti/behav_with_regs.wcfg
-source test_bench_1.tcl
-run 50000 ns
+launch_simulation -mode post-synthesis -type functional
+open_wave_config {C:/Users/franc/OneDrive - Politecnico di Milano/AA 202223/Reti Logiche/Progetto_Reti_Logiche/Project_code_2023/Progetto_reti/behav_with_regs.wcfg}
+source test_bench_ch_out.tcl
+run 5000 us
 close_sim
+launch_simulation -mode post-synthesis -type functional
+open_wave_config {C:/Users/franc/OneDrive - Politecnico di Milano/AA 202223/Reti Logiche/Progetto_Reti_Logiche/Project_code_2023/Progetto_reti/behav_with_regs.wcfg}
+source test_bench_ch_out.tcl
+run 5000 us
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top test_bench_mem_addr [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode All [current_project]
+update_compile_order -fileset sim_1
+launch_simulation -mode post-synthesis -type functional
+close_sim
+launch_simulation -mode post-synthesis -type functional
+open_wave_config {C:/Users/franc/OneDrive - Politecnico di Milano/AA 202223/Reti Logiche/Progetto_Reti_Logiche/Project_code_2023/Progetto_reti/behav_with_regs.wcfg}
+source test_bench_mem_addr.tcl
+save_wave_config {C:/Users/franc/OneDrive - Politecnico di Milano/AA 202223/Reti Logiche/Progetto_Reti_Logiche/Project_code_2023/Progetto_reti/behav_with_regs.wcfg}
+close_sim
+launch_simulation -mode post-synthesis -type functional
+open_wave_config {C:/Users/franc/OneDrive - Politecnico di Milano/AA 202223/Reti Logiche/Progetto_Reti_Logiche/Project_code_2023/Progetto_reti/behav_with_regs.wcfg}
+source test_bench_mem_addr.tcl
+run 5000 us
