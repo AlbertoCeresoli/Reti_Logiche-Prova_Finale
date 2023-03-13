@@ -155,7 +155,10 @@ PROJECT : project_reti_logiche
         wait until tb_done = '1';
         wait for clock/2;
         assert tb_z0 = std_logic_vector(to_unsigned(16, 8))  report "TEST FAILED (Z0 ---) found " & integer'image(to_integer(unsigned(tb_z0))) severity failure; --. Expected  209  found " & integer'image(tb_z0))))  severity failure;
-        
+        assert tb_z1 = "00000000" report "TEST FAILED (postdone Z0--Z3 != 0 ) found " & integer'image(to_integer(unsigned(tb_z1))) severity failure; 
+        assert tb_z2 = "00000000" report "TEST FAILED (postdone Z0--Z3 != 0 ) found " & integer'image(to_integer(unsigned(tb_z2))) severity failure; 
+        assert tb_z3 = "00000000" report "TEST FAILED (postdone Z0--Z3 != 0 ) found " & integer'image(to_integer(unsigned(tb_z3))) severity failure; 
+
         --Channel closed when o_done = '0'
         wait until tb_done = '0';
         WAIT FOR clock/2;
@@ -170,7 +173,10 @@ PROJECT : project_reti_logiche
         wait until tb_done = '1';
         wait for clock/2;
         assert tb_z0 = std_logic_vector(to_unsigned(52, 8))  report "TEST FAILED (Z0 ---) found " & integer'image(to_integer(unsigned(tb_z0))) severity failure; --. Expected  209  found " & integer'image(tb_z0))))  severity failure;
-        
+        assert tb_z1 = "00000000" report "TEST FAILED (postdone Z0--Z3 != 0 ) found " & integer'image(to_integer(unsigned(tb_z1))) severity failure; 
+        assert tb_z2 = "00000000" report "TEST FAILED (postdone Z0--Z3 != 0 ) found " & integer'image(to_integer(unsigned(tb_z2))) severity failure; 
+        assert tb_z3 = "00000000" report "TEST FAILED (postdone Z0--Z3 != 0 ) found " & integer'image(to_integer(unsigned(tb_z3))) severity failure; 
+
         --Channel closed when o_done = '0'
         wait until tb_done = '0';
         WAIT FOR clock/2;
@@ -185,7 +191,9 @@ PROJECT : project_reti_logiche
         wait for clock/2;
         assert tb_z0 = std_logic_vector(to_unsigned(52, 8))  report "TEST FAILED (Z0 ---) found " & integer'image(to_integer(unsigned(tb_z0))) severity failure; --. Expected  209  found " & integer'image(tb_z0))))  severity failure;
         assert tb_z1 = std_logic_vector(to_unsigned(27, 8))  report "TEST FAILED (Z1 ---) found " & integer'image(to_integer(unsigned(tb_z1))) severity failure; --. Expected  209  found " & integer'image(tb_z0))))  severity failure;
-        
+        assert tb_z2 = "00000000" report "TEST FAILED (postdone Z0--Z3 != 0 ) found " & integer'image(to_integer(unsigned(tb_z2))) severity failure; 
+        assert tb_z3 = "00000000" report "TEST FAILED (postdone Z0--Z3 != 0 ) found " & integer'image(to_integer(unsigned(tb_z3))) severity failure; 
+
         --Channel closed when o_done = '0'
         wait until tb_done = '0';
         WAIT FOR clock/2;
@@ -201,7 +209,9 @@ PROJECT : project_reti_logiche
         wait for clock/2;
         assert tb_z0 = std_logic_vector(to_unsigned(52, 8))  report "TEST FAILED (Z0 ---) found " & integer'image(to_integer(unsigned(tb_z0))) severity failure; --. Expected  209  found " & integer'image(tb_z0))))  severity failure;
         assert tb_z1 = std_logic_vector(to_unsigned(47, 8))  report "TEST FAILED (Z1 ---) found " & integer'image(to_integer(unsigned(tb_z1))) severity failure; --. Expected  209  found " & integer'image(tb_z0))))  severity failure;
-        
+        assert tb_z2 = "00000000" report "TEST FAILED (postdone Z0--Z3 != 0 ) found " & integer'image(to_integer(unsigned(tb_z2))) severity failure;         
+        assert tb_z3 = "00000000" report "TEST FAILED (postdone Z0--Z3 != 0 ) found " & integer'image(to_integer(unsigned(tb_z3))) severity failure; 
+
         --Channel closed when o_done = '0'
         wait until tb_done = '0';
         WAIT FOR clock/2;
@@ -217,7 +227,8 @@ PROJECT : project_reti_logiche
         assert tb_z0 = std_logic_vector(to_unsigned(52, 8))  report "TEST FAILED (Z0 ---) found " & integer'image(to_integer(unsigned(tb_z0))) severity failure; --. Expected  209  found " & integer'image(tb_z0))))  severity failure;
         assert tb_z1 = std_logic_vector(to_unsigned(47, 8))  report "TEST FAILED (Z1 ---) found " & integer'image(to_integer(unsigned(tb_z1))) severity failure; --. Expected  209  found " & integer'image(tb_z0))))  severity failure;
         assert tb_z2 = std_logic_vector(to_unsigned(63, 8))  report "TEST FAILED (Z2 ---) found " & integer'image(to_integer(unsigned(tb_z2))) severity failure; --. Expected  209  found " & integer'image(tb_z0))))  severity failure;
-        
+        assert tb_z3 = "00000000" report "TEST FAILED (postdone Z0--Z3 != 0 ) found " & integer'image(to_integer(unsigned(tb_z3))) severity failure; 
+
         --Channel closed when o_done = '0'
         wait until tb_done = '0';
         WAIT FOR clock/2;
