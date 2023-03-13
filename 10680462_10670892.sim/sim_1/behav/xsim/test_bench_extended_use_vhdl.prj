@@ -1,7 +1,7 @@
 # compile vhdl design source files
 vhdl xil_defaultlib  \
 "../../../../10680462_10670892.srcs/sources_1/new/project_reti_logiche.vhd" \
-"../../../../10680462_10670892.srcs/sim_1/new/test_bench_ch_out.vhd" \
+"../../../../10680462_10670892.srcs/sim_1/new/test_bench_extended_use.vhd" \
 
 # Do not sort compile order
 nosort
