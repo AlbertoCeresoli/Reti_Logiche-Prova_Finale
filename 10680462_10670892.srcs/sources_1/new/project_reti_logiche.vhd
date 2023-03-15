@@ -186,7 +186,7 @@ begin
             when RECEIVING_CH2 =>                                   --Second bit of selection stored
                 rw_load <= '1';
                 rz_load <= '0'; 
-        when RECEIVING_W =>                                         --Memory address is stored in a dedicated register
+            when RECEIVING_W =>                                     --Memory address is stored in a dedicated register
                 rw_load <= '1';
                 rz_load <= '0';
             when WAIT_MEM =>                                        --The memory in enabled to return the requested data

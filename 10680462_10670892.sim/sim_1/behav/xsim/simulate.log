@@ -1,4 +1,1 @@
 Time resolution is 1 ps
-Failure: Simulation Ended! TEST PASSED)
-Time: 104150 ns  Iteration: 0  Process: /test_bench_extended_use/RUNTEST  File: C:/Users/DELL/Desktop/10680462_10670892/Progetto_reti/10680462_10670892.srcs/sim_1/new/test_bench_extended_use.vhd
-$finish called at time : 104150 ns : File "C:/Users/DELL/Desktop/10680462_10670892/Progetto_reti/10680462_10670892.srcs/sim_1/new/test_bench_extended_use.vhd" Line 324
